@@ -111,7 +111,7 @@
                         :img="img1"
                         class="me-2"
                         size="xs"
-                        circular="rounded-circle"
+                        circular
                         alt="user image"
                       />
                       <span>Orlando Imieto</span>
@@ -151,7 +151,7 @@
                       <vmd-avatar
                         :img="img2"
                         size="xs"
-                        circular="rounded-circle"
+                        circular
                         class="me-2"
                         alt="user image"
                       />
@@ -234,7 +234,7 @@
                           :img="img3"
                           size="xs"
                           class="me-2"
-                          circular="rounded-circle"
+                          circular
                           alt="user image"
                         />
                         <span>Andrew Nichel</span>
@@ -276,7 +276,7 @@
                         <vmd-avatar
                           :img="img4"
                           size="xs"
-                          circular="rounded-circle"
+                          circular
                           class="me-2"
                           alt="user image"
                         />
@@ -433,7 +433,7 @@
                         <vmd-avatar
                           :img="img5"
                           size="xs"
-                          circular="rounded-circle"
+                          circular
                           class="me-2"
                           alt="user image"
                         />
@@ -477,7 +477,7 @@
                           :img="img6"
                           size="xs"
                           class="me-2"
-                          circular="rounded"
+                          circular
                           alt="user image"
                         />
                         <span>Anna Landa</span>

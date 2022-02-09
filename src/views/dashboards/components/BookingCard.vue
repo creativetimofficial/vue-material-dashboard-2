@@ -58,7 +58,7 @@ export default {
     title: String,
     description: String,
     price: String,
-    loaction: String,
+    location: String,
   },
 };
 </script>

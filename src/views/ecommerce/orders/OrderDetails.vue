@@ -32,7 +32,7 @@
                       :img="img1"
                       class="me-3"
                       size="xxl"
-                      circular="rounded-circle"
+                      circular
                       alt="product image"
                     />
                   </div>

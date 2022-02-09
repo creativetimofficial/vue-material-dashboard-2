@@ -2,13 +2,7 @@
   <div class="card card-body mt-4" id="profile">
     <div class="row justify-content-center align-items-center">
       <div class="col-sm-auto col-4">
-        <vmd-avatar
-          :img="img"
-          alt="bruce"
-          size="xl"
-          shadow="sm"
-          circular="rounded-circle"
-        />
+        <vmd-avatar :img="img" alt="bruce" size="xl" shadow="sm" circular />
       </div>
       <div class="col-sm-auto col-8 my-auto">
         <div class="h-100">

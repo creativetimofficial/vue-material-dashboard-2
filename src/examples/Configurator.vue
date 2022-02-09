@@ -117,8 +117,7 @@
               type="checkbox"
               id="navbarFixed"
               :checked="this.$store.state.isNavFixed"
-              @change="setNavbarFixed"
-              v-model="fixedKey"
+              @click="setNavbarFixed"
             />
           </div>
         </div>
@@ -146,10 +145,8 @@
             <input
               class="form-check-input mt-1 ms-auto"
               type="checkbox"
-              id="dark-version"
               :checked="this.$store.state.isDarkMode"
-              @change="darkMode"
-              v-model="darkModeKey"
+              @click="darkMode"
             />
           </div>
         </div>
@@ -203,16 +200,11 @@
 
 <script>
 import { mapMutations } from "vuex";
-import activateDarkMode from "@/assets/js/dark-mode";
+import { activateDarkMode, deactivateDarkMode } from "@/assets/js/dark-mode";
 
 export default {
   name: "configurator",
   props: ["toggle"],
-  data() {
-    return {
-      darkModeKey: "",
-    };
-  },
   methods: {
     ...mapMutations(["navbarMinimize", "sidebarType", "navbarFixed"]),
 
@@ -235,7 +227,14 @@ export default {
     },
 
     darkMode() {
-      this.$store.state.isDarkMode = !this.$store.state.isDarkMode;
+      if (this.$store.state.isDarkMode) {
+        this.$store.state.isDarkMode = false;
+        deactivateDarkMode();
+        return;
+      } else {
+        this.$store.state.isDarkMode = true;
+        activateDarkMode();
+      }
     },
 
     sidenavTypeOnResize() {
@@ -259,11 +258,6 @@ export default {
     this.$store.state.isTransparent = "bg-transparent";
     window.addEventListener("resize", this.sidenavTypeOnResize);
     window.addEventListener("load", this.sidenavTypeOnResize);
-  },
-  updated() {
-    this.$store.state.isDarkMode
-      ? activateDarkMode(true)
-      : activateDarkMode(false);
   },
 };
 </script>
