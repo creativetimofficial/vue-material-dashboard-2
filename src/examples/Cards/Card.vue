@@ -2,19 +2,7 @@
   <div class="mb-4 card">
     <div class="p-3 card-body">
       <div class="row" :class="directionReverse ? reverseDirection : ''">
-        <div class="col-4">
-          <div
-            class="icon icon-lg icon-shape bg-gradient-success shadow text-center border-radius-md"
-          >
-            <i
-              class="opacity-10 material-icons"
-              :class="iconClass"
-              aria-hidden="true"
-              >{{ iconName }}</i
-            >
-          </div>
-        </div>
-        <div :class="contentClass" class="col-8 my-auto text-end">
+        <div :class="contentClass" class="col-8">
           <p class="mb-0 text-sm text-capitalize" :class="titleColor">
             {{ title }}
           </p>
@@ -25,7 +13,20 @@
             }}</span>
           </h5>
         </div>
+         <div class="col-4 text-end">
+          <div
+            class="icon icon-shape bg-gradient-success shadow text-center border-radius-md"
+          >
+            <i
+              class="opacity-10 material-icons"
+              :class="iconClass"
+              aria-hidden="true"
+              >{{ iconName }}</i
+            >
+          </div>
+        </div>
       </div>
+      
     </div>
   </div>
 </template>
