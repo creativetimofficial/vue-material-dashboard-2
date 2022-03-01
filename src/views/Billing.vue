@@ -42,11 +42,11 @@
         <invoice-card />
       </div>
     </div>
-    <div class="row mt-4">
+    <div class="row">
       <div class="col-md-7">
         <billing-card />
       </div>
-      <div class="col-md-5 mt-4">
+      <div class="col-md-5">
         <transaction-card />
       </div>
     </div>

@@ -2,17 +2,19 @@
   <!-- Navbar -->
   <nav
     class="top-0 navbar navbar-expand-lg position-absolute z-index-3"
-    :class="isBlur ? isBlur : 'shadow-none my-3 navbar-transparent w-100 mt-4'"
+    :class="isBlur ? isBlur : 'shadow-none my-2 navbar-transparent w-100'"
   >
-    <div class="container" :class="isBlur && 'px-1'">
-      <a
+    <div class="container px-0">
+      <router-link
         class="navbar-brand font-weight-bolder ms-lg-0 ms-3"
-        :class="darkMode ? 'text-black' : 'text-white'"
-        href="/"
-        >Material Dashboard 2</a
+        to="/dashboard"
+        v-bind="$attrs"
+        :class="isBlur ? 'text-dark' : 'text-white'"
       >
+        Material Dashboard 2
+      </router-link>
       <button
-        class="shadow-none navbar-toggler ms-2"
+        class="navbar-toggler shadow-none ms-2"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navigation"
@@ -20,90 +22,65 @@
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="mt-2 navbar-toggler-icon">
+        <span class="navbar-toggler-icon mt-2">
           <span class="navbar-toggler-bar bar1"></span>
           <span class="navbar-toggler-bar bar2"></span>
           <span class="navbar-toggler-bar bar3"></span>
         </span>
       </button>
-      <div
-        class="pt-3 pb-2 collapse navbar-collapse w-100 py-lg-0"
-        id="navigation"
-      >
-        <ul class="mx-auto navbar-nav navbar-nav-hover">
-      
-          <li class="mx-2 nav-item dropdown dropdown-hover">
-            <a
-              role="button"
-              class="cursor-pointer nav-link ps-2 d-flex justify-content-between align-items-center"
-              :class="[darkModes]"
-              id="dropdownMenuAccount"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+      <div class="collapse navbar-collapse" id="navigation">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <router-link
+              class="nav-link d-flex align-items-center me-2 active"
+              aria-current="page"
+              to="/dashboard"
             >
-              Authentication
-              <img
-                :src="downArrWhite"
-                alt="down-arrow"
-                class="arrow ms-1"
-                :class="darkMode ? 'd-none' : 'd-lg-block d-none'"
-              />
-              <img
-                :src="downArrBlack"
-                alt="down-arrow"
-                class="arrow ms-1 d-block"
-                :class="darkMode ? 'd-lg-block' : 'd-lg-none'"
-              />
-            </a>
-            <div
-              class="dropdown-menu dropdown-menu-animation dropdown-md border-radius-xl p-3 mt-0 mt-lg-3"
-              aria-labelledby="dropdownMenuAccount"
-            >
-              <div class="d-none d-lg-flex">
-                <div
-                  class="col-12 ps-0 d-flex justify-content-center flex-column"
-                >
-                  <ul class="list-group">
-                    <li
-                      class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0"
-                    >
-                      <a
-                        class="mb-1 dropdown-item border-radius-md ps-3 d-flex align-items-center"
-                        id="dropdownSignUp"
-                      >
-                        <i class="material-icons opacity-6 me-2 text-md"
-                          >login</i
-                        >
-
-                        <span>Sign In</span>
-                        <img
-                          src="@/assets/img/down-arrow.svg"
-                          alt="down-arrow"
-                          class="arrow ms-auto"
-                        />
-                      </a>
-                    
-                    </li>
-                    
-                  
-                  </ul>
-                </div>
-              </div>
-              <div class="row d-lg-none">
-                
-              </div>
-            </div>
+              <i
+                class="fa fa-chart-pie opacity-6 me-1"
+                aria-hidden="true"
+                :class="isBlur ? 'text-dark' : 'text-white'"
+              ></i>
+              Dashboard
+            </router-link>
           </li>
-         
+          <li class="nav-item">
+            <router-link class="nav-link me-2" to="/profile">
+              <i
+                class="fa fa-user opacity-6 me-1"
+                aria-hidden="true"
+                :class="isBlur ? 'text-dark' : 'text-white'"
+              ></i>
+              Profile
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link me-2" to="/sign-up">
+              <i
+                class="fas fa-user-circle opacity-6 me-1"
+                aria-hidden="true"
+                :class="isBlur ? 'text-dark' : 'text-white'"
+              ></i>
+              Sign Up
+            </router-link>
+          </li>
+          <li class="nav-item">
+            <router-link class="nav-link me-2" to="/sign-in">
+              <i
+                class="fas fa-key opacity-6 me-1"
+                aria-hidden="true"
+                :class="isBlur ? 'text-dark' : 'text-white'"
+              ></i>
+              Sign In
+            </router-link>
+          </li>
         </ul>
         <ul class="navbar-nav d-lg-block d-none">
           <li class="nav-item">
             <a
-              href="javascript:;"
-              class="mb-0 btn btn-sm me-1"
-              :class="btnBackground ? btnBackground : 'bg-white'"
-              onclick="smoothToPricing('pricing-soft-ui')"
-              >Buy Now</a
+              href="https://www.creative-tim.com/product/vue-material-dashboard-2"
+              class="btn btn-sm mb-0 me-1 bg-gradient-success"
+              >Free download</a
             >
           </li>
         </ul>

@@ -1,5 +1,5 @@
 <template>
-  <div class="card h-100 mt-4">
+  <div class="card mt-4">
     <div class="card-header pb-0 p-3">
       <div class="row">
         <div class="col-6 d-flex align-items-center">
@@ -12,7 +12,7 @@
         </div>
       </div>
     </div>
-    <div class="card-body p-3 pb-0 mb-0">
+    <div class="card-body p-3 mb-0">
       <ul class="list-group">
         <li
           class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg"

@@ -31,7 +31,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: "Website Views"
+      default: "Website Views",
     },
     desc: {
       type: String,
@@ -39,8 +39,8 @@ export default {
     },
     date: {
       type: String,
-      default: "campaign sent 2 days ago"
-    }
+      default: "campaign sent 2 days ago",
+    },
   },
 
   mounted() {

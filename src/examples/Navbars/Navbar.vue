@@ -13,28 +13,6 @@
         :class="this.$store.state.isRTL ? 'px-0' : 'me-sm-4'"
         id="navbar"
       >
-        <a @click.prevent="minNav" href="#" class="p-0 nav-link text-body">
-          <div class="sidenav-toggler-inner">
-            <i
-              class="sidenav-toggler-line"
-              :class="textWhite ? 'bg-white' : ''"
-            ></i>
-            <i
-              class="sidenav-toggler-line"
-              :class="textWhite ? 'bg-white' : ''"
-            ></i>
-            <i
-              class="sidenav-toggler-line"
-              :class="textWhite ? 'bg-white' : ''"
-            ></i>
-          </div>
-        </a>
-      </div>
-      <div
-        class="mt-2 collapse navbar-collapse mt-sm-0 me-md-0 me-sm-4"
-        :class="this.$store.state.isRTL ? 'px-0' : 'me-sm-4'"
-        id="navbar"
-      >
         <div
           class="pe-md-3 d-flex align-items-center"
           :class="this.$store.state.isRTL ? 'me-md-auto' : 'ms-md-auto'"

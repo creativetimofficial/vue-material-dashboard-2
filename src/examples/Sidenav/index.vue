@@ -26,8 +26,8 @@
           class="navbar-brand-img h-100"
           alt="main_logo"
         />
-        <span class="ms-1 font-weight-bold text-white"
-          >Material Dashboard 2 PRO</span
+        <span class="ms-2 font-weight-bold text-white"
+          >Material Dashboard 2</span
         >
       </a>
     </div>

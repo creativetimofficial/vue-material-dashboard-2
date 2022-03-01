@@ -57,10 +57,10 @@
                 </div>
                 <p class="mt-4 text-sm text-center">
                   Don't have an account?
-                  <a
-                    href="../../../pages/authentication/signup/illustration.html"
+                  <router-link
+                    :to="{ name: 'SignUp' }"
                     class="text-success text-gradient font-weight-bold"
-                    >Sign up</a
+                    >Sign up</router-link
                   >
                 </p>
               </form>

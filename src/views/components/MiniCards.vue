@@ -12,13 +12,19 @@
           >{{ iconName }}</i
         >
       </div>
-      <div class="text-end pt-1" >
+      <div
+        class="pt-1"
+        :class="this.$store.state.isRTL ? 'text-start' : 'text-end'"
+      >
         <p class="text-sm mb-0 text-capitalize">{{ title }}</p>
         <h4 class="mb-0">{{ value }}</h4>
       </div>
     </div>
     <hr class="dark horizontal my-0" />
-    <div class="card-footer p-3">
+    <div
+      class="card-footer p-3"
+      :class="this.$store.state.isRTL ? 'text-start' : 'text-end'"
+    >
       <p class="mb-0">
         <span class="text-success text-sm font-weight-bolder">{{
           percentage
@@ -32,10 +38,10 @@
 <script>
 export default {
   name: "mini-cards",
-  data() { 
+  data() {
     return {
-      reverseDirection: "flex-row-reverse justify-content-between"
-    }
+      reverseDirection: "flex-row-reverse justify-content-between",
+    };
   },
   props: {
     directionReverse: Boolean,

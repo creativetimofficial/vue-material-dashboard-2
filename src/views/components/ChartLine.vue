@@ -31,10 +31,10 @@ import Chart from "chart.js/auto";
 
 export default {
   name: "chart-line",
-   props: {
+  props: {
     title: {
       type: String,
-      default: "Website Views"
+      default: "Website Views",
     },
     desc: {
       type: String,
@@ -42,8 +42,8 @@ export default {
     },
     date: {
       type: String,
-      default: "campaign sent 2 days ago"
-    }
+      default: "campaign sent 2 days ago",
+    },
   },
   mounted() {
     var ctx2 = document.getElementById("chart-line").getContext("2d");

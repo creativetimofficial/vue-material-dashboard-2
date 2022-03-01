@@ -5,6 +5,11 @@
     :aria-controls="collapseRef"
     :aria-expanded="isExpanded"
     class="nav-link"
+    :class="
+      getRoute() === collapseRef
+        ? `active bg-gradient-${this.$store.state.mcolor}`
+        : ''
+    "
     v-bind="$attrs"
     type="button"
     @click="this.isExpanded = !this.isExpanded"
@@ -46,6 +51,12 @@ export default {
     return {
       isExpanded: false,
     };
+  },
+  methods: {
+    getRoute() {
+      const routeArr = this.$route.path.split("/");
+      return routeArr[1];
+    },
   },
 };
 </script>

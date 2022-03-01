@@ -7,7 +7,7 @@ export default createStore({
     showConfig: false,
     sidebarType: "bg-gradient-dark",
     isRTL: false,
-    mcolor: "",
+    mcolor: "success",
     isNavFixed: false,
     isAbsolute: false,
     showNavs: true,
@@ -22,15 +22,13 @@ export default createStore({
       state.showConfig = !state.showConfig;
     },
     navbarMinimize(state) {
-      const sidenavShow = document.getElementsByClassName("g-sidenav-show")[0];
+      const sidenav_show = document.querySelector(".g-sidenav-show");
 
-      if (sidenavShow.classList.contains("g-sidenav-pinned")) {
-        sidenavShow.classList.remove("g-sidenav-pinned");
-        sidenavShow.classList.add("g-sidenav-hidden");
+      if (sidenav_show.classList.contains("g-sidenav-pinned")) {
+        sidenav_show.classList.remove("g-sidenav-pinned");
         state.isPinned = true;
       } else {
-        sidenavShow.classList.remove("g-sidenav-hidden");
-        sidenavShow.classList.add("g-sidenav-pinned");
+        sidenav_show.classList.add("g-sidenav-pinned");
         state.isPinned = false;
       }
     },

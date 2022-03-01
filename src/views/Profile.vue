@@ -206,8 +206,8 @@
                     <vmd-switch
                       class="ps-0"
                       id="flexSwitchCheckDefault"
-                      labelClass="mb-0 text-body ms-3 text-truncate w-80"
-                      inputClass="ms-auto"
+                      labelClass="mb-0 text-body text-truncate w-80"
+                      inputClass="ms-0"
                       checked
                       >Email me when someone follows me</vmd-switch
                     >
@@ -216,8 +216,8 @@
                     <vmd-switch
                       class="ps-0"
                       id="flexSwitchCheckDefault1"
-                      labelClass="mb-0 text-body ms-3 text-truncate w-80"
-                      inputClass="ms-auto"
+                      labelClass="mb-0 text-body text-truncate w-80"
+                      inputClass="ms-0"
                       >Email me when someone answers on my post</vmd-switch
                     >
                   </li>
@@ -226,8 +226,8 @@
                     <vmd-switch
                       class="ps-0"
                       id="flexSwitchCheckDefault2"
-                      labelClass="mb-0 text-body ms-3 text-truncate w-80"
-                      inputClass="ms-auto"
+                      labelClass="mb-0 text-body text-truncate w-80"
+                      inputClass="ms-0"
                       checked
                       >Email me when someone mentions me</vmd-switch
                     >
@@ -243,8 +243,8 @@
                     <vmd-switch
                       class="ps-0"
                       id="flexSwitchCheckDefault3"
-                      labelClass="mb-0 text-body ms-3 text-truncate w-80"
-                      inputClass="ms-auto"
+                      labelClass="mb-0 text-body text-truncate w-80"
+                      inputClass="ms-0"
                       >New launches and projects</vmd-switch
                     >
                   </li>
@@ -252,8 +252,8 @@
                     <vmd-switch
                       class="ps-0"
                       id="flexSwitchCheckDefault4"
-                      labelClass="mb-0 text-body ms-3 text-truncate w-80"
-                      inputClass="ms-auto"
+                      labelClass="mb-0 text-body text-truncate w-80"
+                      inputClass="ms-0"
                       checked
                       >Monthly product updates</vmd-switch
                     >
@@ -262,8 +262,8 @@
                     <vmd-switch
                       class="ps-0"
                       id="flexSwitchCheckDefault5"
-                      labelClass="mb-0 text-body ms-3 text-truncate w-80"
-                      inputClass="ms-auto"
+                      labelClass="mb-0 text-body text-truncate w-80"
+                      inputClass="ms-0"
                       >Subscribe to newsletter</vmd-switch
                     >
                   </li>

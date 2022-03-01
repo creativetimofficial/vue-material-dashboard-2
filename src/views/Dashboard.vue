@@ -2,7 +2,7 @@
   <div class="py-4 container-fluid">
     <div class="row mb-4">
       <div class="col-lg-12 position-relative z-index-2">
-         <div class="row">
+        <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6">
             <mini-cards
               title="Today's Money"
@@ -50,18 +50,16 @@
           </div>
         </div>
         <div class="row mt-4">
-          <div class="col-lg-4 col-md-6 mt-4 mb-4">
+          <div class="col-lg-4 col-md-6 mt-4">
             <chart-bars />
           </div>
-          <div class="col-lg-4 col-md-6 mt-4 mb-4">
+          <div class="col-lg-4 col-md-6 mt-4">
             <chart-line />
           </div>
-          <div class="col-lg-4 mt-4 mb-3">
+          <div class="col-lg-4 mt-4">
             <chart-line-tasks />
           </div>
         </div>
-       
-        
       </div>
     </div>
 
@@ -76,7 +74,6 @@
   </div>
 </template>
 <script>
-
 import ChartBars from "./components/ChartBars.vue";
 import ChartLine from "./components/ChartLine.vue";
 import ChartLineTasks from "./components/ChartLineTasks.vue";
@@ -84,10 +81,15 @@ import MiniCards from "./components/MiniCards.vue";
 import ProjectsCard from "./components/ProjectsCard.vue";
 import OrdersCard from "./components/OrdersCard.vue";
 
-
-
 export default {
   name: "dashboard-default",
-  components: { ChartBars, ChartLine, ChartLineTasks, MiniCards, ProjectsCard, OrdersCard },
+  components: {
+    ChartBars,
+    ChartLine,
+    ChartLineTasks,
+    MiniCards,
+    ProjectsCard,
+    OrdersCard,
+  },
 };
 </script>

@@ -5,7 +5,7 @@
     v-if="this.$store.state.showSidenav"
   />
   <main
-    class="main-content position-relative max-height-vh-100 h-100 border-radius-lg overflow-x-hidden"
+    class="main-content position-relative max-height-vh-100 h-100 overflow-x-hidden"
   >
     <!-- nav -->
     <navbar

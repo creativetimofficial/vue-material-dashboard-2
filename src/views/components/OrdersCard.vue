@@ -157,12 +157,12 @@ export default {
     },
     newOrder2: {
       type: String,
-      default: "New order #9583120"
+      default: "New order #9583120",
     },
     newOrder2Date: {
       type: String,
-      default: "DEC 17"
-    }
+      default: "DEC 17",
+    },
   },
 };
 </script>
