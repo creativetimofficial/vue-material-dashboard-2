@@ -1,9 +1,5 @@
 <template>
   <a
-    :data-bs-toggle="collapse ? 'collapse' : ''"
-    :href="collapse ? `#${collapseRef}` : collapseRef"
-    :aria-controls="collapseRef"
-    :aria-expanded="isExpanded"
     class="nav-link"
     :class="
       getRoute() === collapseRef
@@ -11,8 +7,6 @@
         : ''
     "
     v-bind="$attrs"
-    type="button"
-    @click="this.isExpanded = !this.isExpanded"
   >
     <div
       class="text-center d-flex align-items-center justify-content-center"
@@ -42,15 +36,6 @@ export default {
       type: String,
       required: true,
     },
-    collapse: {
-      type: Boolean,
-      default: true,
-    },
-  },
-  data() {
-    return {
-      isExpanded: false,
-    };
   },
   methods: {
     getRoute() {
