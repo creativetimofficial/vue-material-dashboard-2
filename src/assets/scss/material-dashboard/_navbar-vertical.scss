@@ -743,9 +743,7 @@ body:not(.dark-version) {
 }
 
 .sidenav.bg-white *,
-.sidenav.bg-transparent *,
-.sidenav.bg-white .collapse .nav-item .nav-link.active i,
-.sidenav.bg-transparent .collapse .nav-item .nav-link.active i {
+.sidenav.bg-transparent * {
   color: $h-color !important;
 }
 
@@ -753,5 +751,17 @@ body:not(.dark-version) {
 .sidenav.bg-transparent .collapse .nav-item .nav-link.active .sidenav-mini-icon,
 .sidenav.bg-white .collapse .nav-item .nav-link.active .sidenav-normal,
 .sidenav.bg-transparent .collapse .nav-item .nav-link.active .sidenav-normal {
+  color: $white !important;
+}
+
+.navbar-vertical .navbar-nav > .nav-item .nav-link.active * {
+  color: $white !important;
+}
+
+.dark-version .sidenav.bg-white .collapse .nav-item .nav-link.active i {
+  color: $white !important;
+}
+
+.sidenav .sidenav-footer .btn {
   color: $white !important;
 }
