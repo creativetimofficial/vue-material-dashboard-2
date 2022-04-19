@@ -50,11 +50,6 @@
         </div>
         <div class="row mt-4">
           <div class="col-lg-4 col-md-6 mt-4">
-            <chart-bars
-              title="مشاهدات الموقع"
-              desc="آخر أداء للحملة"
-              date="الحملة أرسلت قبل يومين"
-            />
             <chart-holder-card
               title="مشاهدات الموقع"
               subtitle="آخر أداء للحملة"
