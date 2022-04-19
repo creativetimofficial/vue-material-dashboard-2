@@ -56,6 +56,10 @@ export default {
         background: "success",
       }),
     },
+    directionReverse: {
+      type: Boolean,
+      default: false,
+    },
   },
   computed: {
     ...mapState(["isRTL"]),
