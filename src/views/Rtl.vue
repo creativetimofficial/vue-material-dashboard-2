@@ -55,20 +55,78 @@
               desc="آخر أداء للحملة"
               date="الحملة أرسلت قبل يومين"
             />
+            <chart-holder-card
+              title="مشاهدات الموقع"
+              subtitle="آخر أداء للحملة"
+              update="الحملة أرسلت قبل يومين"
+            >
+              <reports-bar-chart
+                :chart="{
+                  labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+                  datasets: {
+                    label: 'Sales',
+                    data: [50, 20, 10, 22, 50, 10, 40],
+                  },
+                }"
+              />
+            </chart-holder-card>
           </div>
           <div class="col-lg-4 col-md-6 mt-4">
-            <chart-line
-              title="المبيعات اليومية"
-              desc="(+15%) زيادة في مبيعات اليوم."
-              date="تم التحديث منذ 4 دقائق "
-            />
+            <chart-holder-card
+              title="Daily Sales"
+              subtitle="(<span class='font-weight-bolder'>+15%</span>) المبيعات اليومية."
+              update="تم التحديث منذ 4 دقائق"
+              color="success"
+            >
+              <reports-line-chart
+                :chart="{
+                  labels: [
+                    'Apr',
+                    'May',
+                    'Jun',
+                    'Jul',
+                    'Aug',
+                    'Sep',
+                    'Oct',
+                    'Nov',
+                    'Dec',
+                  ],
+                  datasets: {
+                    label: 'Mobile apps',
+                    data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+                  },
+                }"
+              />
+            </chart-holder-card>
           </div>
           <div class="col-lg-4 mt-4">
-            <chart-line-tasks
+            <chart-holder-card
               title="المهام المكتملة"
-              desc="آخر أداء للحملة"
-              date="تم تحديثه للتو"
-            />
+              subtitle="آخر أداء للحملة"
+              update="تم تحديثه للتو"
+              color="dark"
+            >
+              <reports-line-chart
+                id="tasks-chart"
+                :chart="{
+                  labels: [
+                    'Apr',
+                    'May',
+                    'Jun',
+                    'Jul',
+                    'Aug',
+                    'Sep',
+                    'Oct',
+                    'Nov',
+                    'Dec',
+                  ],
+                  datasets: {
+                    label: 'Mobile apps',
+                    data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+                  },
+                }"
+              />
+            </chart-holder-card>
           </div>
         </div>
       </div>
@@ -113,9 +171,9 @@
 </template>
 
 <script>
-import ChartBars from "./components/ChartBars.vue";
-import ChartLine from "./components/ChartLine.vue";
-import ChartLineTasks from "./components/ChartLineTasks.vue";
+import ChartHolderCard from "./components/ChartHolderCard.vue";
+import ReportsBarChart from "@/examples/Charts/ReportsBarChart.vue";
+import ReportsLineChart from "@/examples/Charts/ReportsLineChart.vue";
 import MiniStatisticsCard from "./components/MiniStatisticsCard.vue";
 import ProjectsCard from "./components/ProjectsCard.vue";
 import OrdersCard from "./components/OrdersCard.vue";
@@ -124,9 +182,9 @@ export default {
   name: "rtl-page",
 
   components: {
-    ChartBars,
-    ChartLine,
-    ChartLineTasks,
+    ChartHolderCard,
+    ReportsBarChart,
+    ReportsLineChart,
     MiniStatisticsCard,
     ProjectsCard,
     OrdersCard,
