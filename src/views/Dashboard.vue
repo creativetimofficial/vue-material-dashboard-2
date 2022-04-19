@@ -4,48 +4,47 @@
       <div class="col-lg-12 position-relative z-index-2">
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6">
-            <mini-cards
-              title="Today's Money"
-              value="$53k"
-              percentage="+55%"
-              iconName="weekend"
-              detail="than last week"
-              iconClass="text-white"
-              iconBackground="bg-gradient-dark"
+            <mini-statistics-card
+              :title="{ text: 'Today\'s Money', value: '$53k' }"
+              detail="<span class='text-success text-sm font-weight-bolder'>+55%</span> than last week"
+              :icon="{
+                name: 'weekend',
+                color: 'text-white',
+                background: 'dark',
+              }"
             />
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
-            <mini-cards
-              title="Today's Users"
-              value="2,300"
-              percentage="+3%"
-              iconName="person"
-              detail="than last month"
-              iconClass="text-white"
-              iconBackground="bg-gradient-primary"
+            <mini-statistics-card
+              :title="{ text: 'Today\'s Users', value: '2,300' }"
+              detail="<span class='text-success text-sm font-weight-bolder'>+3%</span> than last month"
+              :icon="{
+                name: 'leaderboard',
+                color: 'text-white',
+                background: 'primary',
+              }"
             />
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
-            <mini-cards
-              title="New Clients"
-              value="3,462"
-              percentage="-2%"
-              valueColor="text-danger"
-              iconName="person"
-              detail="than yesterday"
-              iconClass="text-white"
-              iconBackground="bg-gradient-success"
+            <mini-statistics-card
+              :title="{ text: 'New Clients', value: '3,462' }"
+              detail="<span class='text-danger text-sm font-weight-bolder'>-2%</span> than yesterday"
+              :icon="{
+                name: 'person',
+                color: 'text-white',
+                background: 'success',
+              }"
             />
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
-            <mini-cards
-              title="Sales"
-              value="$103,430"
-              percentage="+5%"
-              iconName="weekend"
-              detail="Just updated"
-              iconClass="text-white"
-              iconBackground="bg-gradient-info"
+            <mini-statistics-card
+              :title="{ text: 'Sales', value: '$103,430' }"
+              detail="<span class='text-success text-sm font-weight-bolder'>+5%</span> Just updated"
+              :icon="{
+                name: 'weekend',
+                color: 'text-white',
+                background: 'info',
+              }"
             />
           </div>
         </div>
@@ -77,7 +76,7 @@
 import ChartBars from "./components/ChartBars.vue";
 import ChartLine from "./components/ChartLine.vue";
 import ChartLineTasks from "./components/ChartLineTasks.vue";
-import MiniCards from "./components/MiniCards.vue";
+import MiniStatisticsCard from "./components/MiniStatisticsCard.vue";
 import ProjectsCard from "./components/ProjectsCard.vue";
 import OrdersCard from "./components/OrdersCard.vue";
 
@@ -87,7 +86,7 @@ export default {
     ChartBars,
     ChartLine,
     ChartLineTasks,
-    MiniCards,
+    MiniStatisticsCard,
     ProjectsCard,
     OrdersCard,
   },
