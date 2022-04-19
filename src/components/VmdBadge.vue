@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "vmd-badge",
+  name: "VmdBadge",
   props: {
     size: {
       type: String,
