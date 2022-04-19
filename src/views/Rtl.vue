@@ -185,16 +185,61 @@
         />
       </div>
       <div class="col-lg-4 col-md-6">
-        <orders-card
+        <timeline-list
+          class="h-100"
           title="نظرة عامة على الطلبات"
-          text="هذا الشهر"
-          order="$2400, تغييرات في التصميم"
-          newOrder="طلب جديد #1832412"
-          payment="مدفوعات الخادم لشهر أبريل"
-          newCard="تمت إضافة بطاقة جديدة للطلب #4395133"
-          unlockPackages="فتح الحزم من أجل التطوير"
-          newOrder2="طلب جديد #9583120"
-        />
+          description="<i class='material-icons text-sm text-success' aria-hidden='true'>north</i>
+        <span class='font-weight-bold'>24%</span>هذا الشهر"
+        >
+          <timeline-item
+            :icon="{
+              component: 'notifications',
+              class: 'text-success',
+            }"
+            title="$2400, تغييرات في التصميم"
+            date-time="22 ديسمبر 7:20 مساءً"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'code',
+              class: 'text-danger',
+            }"
+            title="طلب جديد # 1832412"
+            date-time="21 ديسمبر 11 م"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'shopping_cart',
+              class: 'text-info',
+            }"
+            title="مدفوعات الخادم لشهر أبريل"
+            date-time="21 ديسمبر 9:34 مساءً"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'credit_card',
+              class: 'text-warning',
+            }"
+            title="تمت إضافة بطاقة جديدة للأمر رقم 4395133"
+            date-time="20 ديسمبر 2:20 صباحًا"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'vpn_key',
+              class: 'text-primary',
+            }"
+            title="فتح الحزم من أجل التطوير"
+            date-time="18 ديسمبر ، 4:54 صباحًا"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'bug_report',
+              class: 'text-dark',
+            }"
+            title="طلب جديد # 9583120"
+            date-time="17 ديسمبر"
+          />
+        </timeline-list>
       </div>
     </div>
   </div>
@@ -206,7 +251,8 @@ import ReportsBarChart from "@/examples/Charts/ReportsBarChart.vue";
 import ReportsLineChart from "@/examples/Charts/ReportsLineChart.vue";
 import MiniStatisticsCard from "./components/MiniStatisticsCard.vue";
 import ProjectCard from "./components/ProjectCard.vue";
-import OrdersCard from "./components/OrdersCard.vue";
+import TimelineList from "@/examples/Cards/TimelineList.vue";
+import TimelineItem from "@/examples/Cards/TimelineItem.vue";
 import logoXD from "@/assets/img/small-logos/logo-xd.svg";
 import logoAtlassian from "@/assets/img/small-logos/logo-atlassian.svg";
 import logoSlack from "@/assets/img/small-logos/logo-slack.svg";
@@ -226,7 +272,8 @@ export default {
     ReportsLineChart,
     MiniStatisticsCard,
     ProjectCard,
-    OrdersCard,
+    TimelineList,
+    TimelineItem,
   },
   data() {
     return {
