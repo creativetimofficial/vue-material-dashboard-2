@@ -115,6 +115,7 @@ import VmdInput from "@/components/VmdInput.vue";
 import VmdCheckbox from "@/components/VmdCheckbox.vue";
 import VmdButton from "@/components/VmdButton.vue";
 const body = document.getElementsByTagName("body")[0];
+import { mapMutations } from "vuex";
 
 export default {
   name: "sign-up",
@@ -124,19 +125,18 @@ export default {
     VmdCheckbox,
     VmdButton,
   },
-  created() {
-    this.$store.state.hideConfigButton = true;
-    this.$store.state.showNavbar = false;
-    this.$store.state.showSidenav = false;
-    this.$store.state.showFooter = false;
+  beforeMount() {
+    this.toggleEveryDisplay();
+    this.toggleHideConfig();
     body.classList.remove("bg-gray-100");
   },
   beforeUnmount() {
-    this.$store.state.hideConfigButton = false;
-    this.$store.state.showNavbar = true;
-    this.$store.state.showSidenav = true;
-    this.$store.state.showFooter = true;
+    this.toggleEveryDisplay();
+    this.toggleHideConfig();
     body.classList.add("bg-gray-100");
+  },
+  methods: {
+    ...mapMutations(["toggleEveryDisplay", "toggleHideConfig"]),
   },
 };
 </script>
