@@ -4,32 +4,29 @@
     v-bind="$attrs"
     id="navbarBlur"
     data-scroll="true"
-    :class="this.$store.state.isAbsolute ? 'mt-4' : 'mt-0'"
+    :class="isAbsolute ? 'mt-4' : 'mt-0'"
   >
     <div class="px-3 py-1 container-fluid">
-      <breadcrumbs :currentPage="currentRouteName" :textWhite="textWhite" />
+      <breadcrumbs :currentPage="currentRouteName" :color="color" />
       <div
         class="mt-2 collapse navbar-collapse mt-sm-0 me-md-0 me-sm-4"
-        :class="this.$store.state.isRTL ? 'px-0' : 'me-sm-4'"
+        :class="isRTL ? 'px-0' : 'me-sm-4'"
         id="navbar"
       >
         <div
           class="pe-md-3 d-flex align-items-center"
-          :class="this.$store.state.isRTL ? 'me-md-auto' : 'ms-md-auto'"
+          :class="isRTL ? 'me-md-auto' : 'ms-md-auto'"
         >
-          <vmd-input label="Search here" />
+          <vmd-input id="search" label="Search here" />
         </div>
         <ul class="navbar-nav justify-content-end">
           <li class="nav-item d-flex align-items-center">
             <router-link
               :to="{ name: 'SignIn' }"
               class="px-0 nav-link font-weight-bold lh-1"
-              :class="textWhite ? textWhite : 'text-body'"
+              :class="color ? color : 'text-body'"
             >
-              <i
-                class="material-icons"
-                :class="this.$store.state.isRTL ? 'ms-sm-2' : 'me-sm-1'"
-              >
+              <i class="material-icons" :class="isRTL ? 'ms-sm-2' : 'me-sm-1'">
                 account_circle
               </i>
             </router-link>
@@ -52,7 +49,7 @@
             <a
               class="p-0 nav-link lh-1"
               @click="toggleConfigurator"
-              :class="textWhite ? textWhite : 'text-body'"
+              :class="color ? color : 'text-body'"
             >
               <i class="material-icons fixed-plugin-button-nav cursor-pointer">
                 settings
@@ -61,15 +58,12 @@
           </li>
           <li
             class="nav-item dropdown d-flex align-items-center"
-            :class="this.$store.state.isRTL ? 'ps-2' : 'pe-2'"
+            :class="isRTL ? 'ps-2' : 'pe-2'"
           >
             <a
               href="#"
               class="p-0 nav-link lh-1"
-              :class="[
-                textWhite ? textWhite : 'text-body',
-                showMenu ? 'show' : '',
-              ]"
+              :class="[color ? color : 'text-body', showMenu ? 'show' : '']"
               id="dropdownMenuButton"
               data-bs-toggle="dropdown"
               aria-expanded="false"
@@ -193,7 +187,7 @@
 <script>
 import VmdInput from "@/components/VmdInput.vue";
 import Breadcrumbs from "../Breadcrumbs.vue";
-import { mapMutations } from "vuex";
+import { mapMutations, mapState } from "vuex";
 
 export default {
   name: "navbar",
@@ -202,7 +196,7 @@ export default {
       showMenu: false,
     };
   },
-  props: ["minNav", "textWhite"],
+  props: ["minNav", "color"],
   created() {
     this.minNav;
   },
@@ -218,6 +212,8 @@ export default {
     VmdInput,
   },
   computed: {
+    ...mapState(["isRTL", "isAbsolute"]),
+
     currentRouteName() {
       return this.$route.name;
     },
