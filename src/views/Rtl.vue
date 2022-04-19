@@ -4,46 +4,47 @@
       <div class="col-lg-12 position-relative z-index-2">
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6">
-            <mini-cards
-              title="أموال اليوم"
-              value="$53k"
-              percentage="+55%"
-              iconName="weekend"
-              detail="من الأسبوع الماضي"
-              iconClass="text-white"
-              iconBackground="bg-gradient-dark"
+            <mini-statistics-card
+              :title="{ text: 'أموال اليوم', value: '$53k' }"
+              detail="<span class='text-success text-sm font-weight-bolder'>+55%</span> من الأسبوع الماضي"
+              :icon="{
+                name: 'weekend',
+                color: 'text-white',
+                background: 'dark',
+              }"
             />
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
-            <mini-cards
-              title="مستخدمو اليوم"
-              value="2,300"
-              percentage="+3%"
-              iconName="leaderboard"
-              detail="من الأسبوع الماضي"
-              iconClass="text-white"
-              iconBackground="bg-gradient-primary"
+            <mini-statistics-card
+              :title="{ text: 'مستخدمو اليوم', value: '2,300' }"
+              detail="<span class='text-success text-sm font-weight-bolder'>+3%</span> من الأسبوع الماضي"
+              :icon="{
+                name: 'leaderboard',
+                color: 'text-white',
+                background: 'primary',
+              }"
             />
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
-            <mini-cards
-              title="عملاء جدد"
-              value="34k"
-              percentage="+1%"
-              iconName="store"
-              detail="من الشهر الماضي"
-              iconClass="text-white"
-              iconBackground="bg-gradient-success"
+            <mini-statistics-card
+              :title="{ text: 'عملاء جدد', value: '34K' }"
+              detail="<span class='text-danger text-sm font-weight-bolder'>+1%</span> من الشهر الماضي"
+              :icon="{
+                name: 'store',
+                color: 'text-white',
+                background: 'success',
+              }"
             />
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
-            <mini-cards
-              title="مبيعات"
-              value="+91"
-              iconName="weekend"
-              detail="مقارنة بيوم أمس"
-              iconClass="text-white"
-              iconBackground="bg-gradient-info"
+            <mini-statistics-card
+              :title="{ text: 'مبيعات', value: '+91' }"
+              detail="<span class='text-success text-sm font-weight-bolder'>+5%</span> مقارنة بيوم أمس"
+              :icon="{
+                name: 'weekend',
+                color: 'text-white',
+                background: 'info',
+              }"
             />
           </div>
         </div>
@@ -115,7 +116,7 @@
 import ChartBars from "./components/ChartBars.vue";
 import ChartLine from "./components/ChartLine.vue";
 import ChartLineTasks from "./components/ChartLineTasks.vue";
-import MiniCards from "./components/MiniCards.vue";
+import MiniStatisticsCard from "./components/MiniStatisticsCard.vue";
 import ProjectsCard from "./components/ProjectsCard.vue";
 import OrdersCard from "./components/OrdersCard.vue";
 
@@ -126,7 +127,7 @@ export default {
     ChartBars,
     ChartLine,
     ChartLineTasks,
-    MiniCards,
+    MiniStatisticsCard,
     ProjectsCard,
     OrdersCard,
   },
