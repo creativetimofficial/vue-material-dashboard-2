@@ -129,7 +129,55 @@
 
     <div class="row">
       <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
-        <projects-card />
+        <project-card
+          title="Projects"
+          description="<i class='fa fa-check text-info' aria-hidden='true'></i> <span class='font-weight-bold ms-1'>30 done</span> this month"
+          :headers="['Companies', 'Members', 'Budget', 'Progress']"
+          :projects="[
+            {
+              logo: logoXD,
+              title: 'Material XD Material XD Version',
+              members: [team1, team2, team3, team4],
+              budget: '$14,000',
+              progress: { percentage: 60, color: 'info' },
+            },
+            {
+              logo: logoAtlassian,
+              title: 'Add Progress Track',
+              members: [team2, team4],
+              budget: '$3,000',
+              progress: { percentage: 10, color: 'info' },
+            },
+            {
+              logo: logoSlack,
+              title: 'Fix Platform Errors',
+              members: [team3, team1],
+              budget: 'Not set',
+              progress: { percentage: 100, color: 'success' },
+            },
+            {
+              logo: logoSpotify,
+              title: 'Launch our Mobile App',
+              members: [team4, team3, team4, team1],
+              budget: '$20,500',
+              progress: { percentage: 100, color: 'success' },
+            },
+            {
+              logo: logoJira,
+              title: 'Add the New Pricing Page',
+              members: [team4],
+              budget: '$500',
+              progress: { percentage: 25, color: 'info' },
+            },
+            {
+              logo: logoJira,
+              title: 'Redesign New Online Shop',
+              members: [team1, team4],
+              budget: '$2,000',
+              progress: { percentage: 40, color: 'info' },
+            },
+          ]"
+        />
       </div>
       <div class="col-lg-4 col-md-6">
         <orders-card />
@@ -142,17 +190,40 @@ import ChartHolderCard from "./components/ChartHolderCard.vue";
 import ReportsBarChart from "@/examples/Charts/ReportsBarChart.vue";
 import ReportsLineChart from "@/examples/Charts/ReportsLineChart.vue";
 import MiniStatisticsCard from "./components/MiniStatisticsCard.vue";
-import ProjectsCard from "./components/ProjectsCard.vue";
+import ProjectCard from "./components/ProjectCard.vue";
 import OrdersCard from "./components/OrdersCard.vue";
-
+import logoXD from "@/assets/img/small-logos/logo-xd.svg";
+import logoAtlassian from "@/assets/img/small-logos/logo-atlassian.svg";
+import logoSlack from "@/assets/img/small-logos/logo-slack.svg";
+import logoSpotify from "@/assets/img/small-logos/logo-spotify.svg";
+import logoJira from "@/assets/img/small-logos/logo-jira.svg";
+import logoInvision from "@/assets/img/small-logos/logo-invision.svg";
+import team1 from "@/assets/img/team-1.jpg";
+import team2 from "@/assets/img/team-2.jpg";
+import team3 from "@/assets/img/team-3.jpg";
+import team4 from "@/assets/img/team-4.jpg";
 export default {
   name: "dashboard-default",
+  data() {
+    return {
+      logoXD,
+      team1,
+      team2,
+      team3,
+      team4,
+      logoAtlassian,
+      logoSlack,
+      logoSpotify,
+      logoJira,
+      logoInvision,
+    };
+  },
   components: {
     ChartHolderCard,
     ReportsBarChart,
     ReportsLineChart,
     MiniStatisticsCard,
-    ProjectsCard,
+    ProjectCard,
     OrdersCard,
   },
 };
