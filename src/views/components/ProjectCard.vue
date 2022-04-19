@@ -22,19 +22,19 @@
               style=""
             >
               <li>
-                <a class="dropdown-item border-radius-md" href="javascript:;">{{
+                <a class="dropdown-item border-radius-md" href="javascript:;">
                   Action
-                }}</a>
+                </a>
               </li>
               <li>
-                <a class="dropdown-item border-radius-md" href="javascript:;">{{
+                <a class="dropdown-item border-radius-md" href="javascript:;">
                   AnotherAction
-                }}</a>
+                </a>
               </li>
               <li>
-                <a class="dropdown-item border-radius-md" href="javascript:;">{{
+                <a class="dropdown-item border-radius-md" href="javascript:;">
                   SomethingElse
-                }}</a>
+                </a>
               </li>
             </ul>
           </div>
