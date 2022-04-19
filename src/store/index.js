@@ -39,6 +39,14 @@ export default createStore({
         state.isNavFixed = false;
       }
     },
+    toggleEveryDisplay(state) {
+      state.showNavbar = !state.showNavbar;
+      state.showSidenav = !state.showSidenav;
+      state.showFooter = !state.showFooter;
+    },
+    toggleHideConfig(state) {
+      state.hideConfigButton = !state.hideConfigButton;
+    },
   },
   getters: {},
 });
