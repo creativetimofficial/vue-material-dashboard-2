@@ -43,6 +43,7 @@
                     <form role="form">
                       <div class="mb-3">
                         <vmd-input
+                          id="name"
                           type="text"
                           label="Name"
                           name="name"
@@ -51,6 +52,7 @@
                       </div>
                       <div class="mb-3">
                         <vmd-input
+                          id="email"
                           type="email"
                           label="Email"
                           name="email"
@@ -59,6 +61,7 @@
                       </div>
                       <div class="mb-3">
                         <vmd-input
+                          id="password"
                           type="password"
                           label="Password"
                           name="password"

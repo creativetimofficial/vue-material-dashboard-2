@@ -40,12 +40,24 @@
             <div class="card-body">
               <form role="form" class="text-start mt-3">
                 <div class="mb-3">
-                  <vmd-input type="email" label="Email" name="email" />
+                  <vmd-input
+                    id="email"
+                    type="email"
+                    label="Email"
+                    name="email"
+                  />
                 </div>
                 <div class="mb-3">
-                  <vmd-input type="password" label="Password" name="password" />
+                  <vmd-input
+                    id="password"
+                    type="password"
+                    label="Password"
+                    name="password"
+                  />
                 </div>
-                <vmd-switch id="rememberMe">Remember me</vmd-switch>
+                <vmd-switch id="rememberMe" name="rememberMe"
+                  >Remember me</vmd-switch
+                >
                 <div class="text-center">
                   <vmd-button
                     class="my-4 mb-2"
