@@ -10,14 +10,32 @@
 
 <script>
 export default {
-  name: "vmd-avatar",
+  name: "VmdAvatar",
   props: {
-    img: String,
-    alt: String,
-    size: String,
-    shadow: String,
-    borderRadius: String,
-    circular: Boolean,
+    img: {
+      type: String,
+      required: true,
+    },
+    alt: {
+      type: String,
+      default: "",
+    },
+    size: {
+      type: String,
+      default: "",
+    },
+    shadow: {
+      type: String,
+      default: "",
+    },
+    borderRadius: {
+      type: String,
+      default: "",
+    },
+    circular: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     getSize: (size) => (size ? `avatar-${size}` : null),
