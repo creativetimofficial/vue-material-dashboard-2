@@ -134,6 +134,7 @@ import Navbar from "@/examples/PageLayout/Navbar.vue";
 import VmdInput from "@/components/VmdInput.vue";
 import VmdSwitch from "@/components/VmdSwitch.vue";
 import VmdButton from "@/components/VmdButton.vue";
+import { mapMutations } from "vuex";
 
 export default {
   name: "sign-in",
@@ -144,16 +145,15 @@ export default {
     VmdButton,
   },
   beforeMount() {
-    this.$store.state.hideConfigButton = true;
-    this.$store.state.showNavbar = false;
-    this.$store.state.showSidenav = false;
-    this.$store.state.showFooter = false;
+    this.toggleEveryDisplay();
+    this.toggleHideConfig();
   },
   beforeUnmount() {
-    this.$store.state.hideConfigButton = false;
-    this.$store.state.showNavbar = true;
-    this.$store.state.showSidenav = true;
-    this.$store.state.showFooter = true;
+    this.toggleEveryDisplay();
+    this.toggleHideConfig();
+  },
+  methods: {
+    ...mapMutations(["toggleEveryDisplay", "toggleHideConfig"]),
   },
 };
 </script>
