@@ -180,7 +180,54 @@
         />
       </div>
       <div class="col-lg-4 col-md-6">
-        <orders-card />
+        <timeline-list
+          class="h-100"
+          title="Orders overview"
+          description="<i class='fa fa-arrow-up text-success' aria-hidden='true'></i>
+        <span class='font-weight-bold'>24%</span> this month"
+        >
+          <timeline-item
+            :icon="{
+              component: 'notifications',
+              class: 'text-success',
+            }"
+            title="$2400 Design changes"
+            date-time="22 DEC 7:20 PM"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'code',
+              class: 'text-danger',
+            }"
+            title="New order #1832412"
+            date-time="21 DEC 11 PM"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'shopping_cart',
+              class: 'text-info',
+            }"
+            title="Server payments for April"
+            date-time="21 DEC 9:34 PM"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'credit_card',
+              class: 'text-warning',
+            }"
+            title="New card added for order #4395133"
+            date-time="20 DEC 2:20 AM"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'vpn_key',
+              class: 'text-primary',
+            }"
+            title="Unlock packages for development"
+            date-time="18 DEC 4:54 AM"
+            class="pb-1"
+          />
+        </timeline-list>
       </div>
     </div>
   </div>
@@ -191,7 +238,8 @@ import ReportsBarChart from "@/examples/Charts/ReportsBarChart.vue";
 import ReportsLineChart from "@/examples/Charts/ReportsLineChart.vue";
 import MiniStatisticsCard from "./components/MiniStatisticsCard.vue";
 import ProjectCard from "./components/ProjectCard.vue";
-import OrdersCard from "./components/OrdersCard.vue";
+import TimelineList from "@/examples/Cards/TimelineList.vue";
+import TimelineItem from "@/examples/Cards/TimelineItem.vue";
 import logoXD from "@/assets/img/small-logos/logo-xd.svg";
 import logoAtlassian from "@/assets/img/small-logos/logo-atlassian.svg";
 import logoSlack from "@/assets/img/small-logos/logo-slack.svg";
@@ -224,7 +272,8 @@ export default {
     ReportsLineChart,
     MiniStatisticsCard,
     ProjectCard,
-    OrdersCard,
+    TimelineList,
+    TimelineItem,
   },
 };
 </script>
