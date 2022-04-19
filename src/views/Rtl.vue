@@ -134,24 +134,54 @@
 
     <div class="row">
       <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
-        <projects-card
-          Action="عمل"
-          AnotherAction="عمل اخر"
-          SomethingElse="شی اخر هنا"
-          th1="المشروع"
-          th2="أعضاء"
-          th3="ميزانية"
-          th4="إكمال"
+        <project-card
           title="المشاريع"
-          desc="هذا الشهر"
-          descBold="انتهى30 "
-          data1="الإصدار"
-          data2="أضف مسار التقدم إلى التطبيق الداخلي"
-          data3="إصلاح أخطاء النظام الأساسي"
-          data5="أضف صفحة التسعير الجديدة"
-          data6="إعادة تصميم متجر جديد على الإنترنت"
-          data4="إطلاق تطبيق الهاتف المحمول الخاص بنا"
-          empty="غير مضبوط"
+          description="<i class='fa fa-check text-info' aria-hidden='true'></i> <span class='font-weight-bold ms-1'>انتهى30</span> هذا الشهر"
+          :headers="['المشروع', 'أعضاء', 'ميزانية', 'إكمال']"
+          :projects="[
+            {
+              logo: logoXD,
+              title: 'Material XD الإصدار',
+              members: [team1, team2, team3, team4],
+              budget: '$14,000',
+              progress: { percentage: 60, color: 'info' },
+            },
+            {
+              logo: logoAtlassian,
+              title: 'أضف مسار التقدم إلى التطبيق الداخلي',
+              members: [team2, team4],
+              budget: '$3,000',
+              progress: { percentage: 10, color: 'info' },
+            },
+            {
+              logo: logoSlack,
+              title: 'إصلاح أخطاء النظام الأساسي',
+              members: [team3, team1],
+              budget: 'Not set',
+              progress: { percentage: 100, color: 'success' },
+            },
+            {
+              logo: logoSpotify,
+              title: 'إطلاق تطبيق الهاتف المحمول الخاص بنا',
+              members: [team4, team3, team4, team1],
+              budget: '$20,500',
+              progress: { percentage: 100, color: 'success' },
+            },
+            {
+              logo: logoJira,
+              title: 'أضف صفحة التسعير الجديدة',
+              members: [team4],
+              budget: '$500',
+              progress: { percentage: 25, color: 'info' },
+            },
+            {
+              logo: logoJira,
+              title: 'إعادة تصميم متجر جديد على الإنترنت',
+              members: [team1, team4],
+              budget: '$2,000',
+              progress: { percentage: 40, color: 'info' },
+            },
+          ]"
         />
       </div>
       <div class="col-lg-4 col-md-6">
@@ -175,21 +205,43 @@ import ChartHolderCard from "./components/ChartHolderCard.vue";
 import ReportsBarChart from "@/examples/Charts/ReportsBarChart.vue";
 import ReportsLineChart from "@/examples/Charts/ReportsLineChart.vue";
 import MiniStatisticsCard from "./components/MiniStatisticsCard.vue";
-import ProjectsCard from "./components/ProjectsCard.vue";
+import ProjectCard from "./components/ProjectCard.vue";
 import OrdersCard from "./components/OrdersCard.vue";
+import logoXD from "@/assets/img/small-logos/logo-xd.svg";
+import logoAtlassian from "@/assets/img/small-logos/logo-atlassian.svg";
+import logoSlack from "@/assets/img/small-logos/logo-slack.svg";
+import logoSpotify from "@/assets/img/small-logos/logo-spotify.svg";
+import logoJira from "@/assets/img/small-logos/logo-jira.svg";
+import logoInvision from "@/assets/img/small-logos/logo-invision.svg";
+import team1 from "@/assets/img/team-1.jpg";
+import team2 from "@/assets/img/team-2.jpg";
+import team3 from "@/assets/img/team-3.jpg";
+import team4 from "@/assets/img/team-4.jpg";
 
 export default {
-  name: "rtl-page",
-
+  name: "RTL",
   components: {
     ChartHolderCard,
     ReportsBarChart,
     ReportsLineChart,
     MiniStatisticsCard,
-    ProjectsCard,
+    ProjectCard,
     OrdersCard,
   },
-
+  data() {
+    return {
+      logoXD,
+      team1,
+      team2,
+      team3,
+      team4,
+      logoAtlassian,
+      logoSlack,
+      logoSpotify,
+      logoJira,
+      logoInvision,
+    };
+  },
   beforeMount() {
     this.$store.state.isRTL = true;
     document.querySelector("html").setAttribute("lang", "ar");
