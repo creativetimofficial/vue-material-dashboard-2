@@ -1,10 +1,10 @@
 <template>
   <div class="form-check">
     <input
+      :id="id"
       class="form-check-input"
       type="radio"
       :name="name"
-      :id="id"
       :checked="checked"
     />
     <label class="custom-control-label" :for="id">
@@ -15,11 +15,20 @@
 
 <script>
 export default {
-  name: "vmd-radio",
+  name: "VmdRadio",
   props: {
-    name: String,
-    id: String,
-    checked: String,
+    name: {
+      type: String,
+      required: true,
+    },
+    id: {
+      type: String,
+      required: true,
+    },
+    checked: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
 </script>
