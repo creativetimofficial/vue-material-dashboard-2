@@ -1,11 +1,11 @@
 <template>
   <div class="form-check form-switch d-flex">
     <input
+      :id="id"
       class="form-check-input"
-      :class="inputClass"
+      :class="$attrs.class"
       type="checkbox"
       :name="name"
-      :id="id"
       :checked="checked"
     />
     <label class="form-check-label ms-3" :class="labelClass" :for="id">
@@ -16,13 +16,24 @@
 
 <script>
 export default {
-  name: "vmd-switch",
+  name: "VmdSwitch",
   props: {
-    name: String,
-    id: String,
-    checked: String,
-    labelClass: String,
-    inputClass: String,
+    name: {
+      type: String,
+      required: true,
+    },
+    id: {
+      type: String,
+      required: true,
+    },
+    checked: {
+      type: Boolean,
+      default: false,
+    },
+    labelClass: {
+      type: String,
+      default: "",
+    },
   },
 };
 </script>
