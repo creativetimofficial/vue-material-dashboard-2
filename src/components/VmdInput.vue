@@ -5,11 +5,11 @@
   >
     <label :class="variant === 'static' ? '' : 'form-label'">{{ label }}</label>
     <input
+      :id="id"
       :type="type"
       class="form-control"
       :class="getClasses(size)"
       :name="name"
-      :id="id"
       :value="value"
       :placeholder="placeholder"
       :isRequired="isRequired"
@@ -22,13 +22,16 @@
 import setMaterialInput from "@/assets/js/material-input.js";
 
 export default {
-  name: "vmd-input",
+  name: "VmdInput",
   props: {
     variant: {
       type: String,
       default: "outline",
     },
-    label: String,
+    label: {
+      type: String,
+      default: "",
+    },
     size: {
       type: String,
       default: "default",
@@ -45,15 +48,33 @@ export default {
       type: Boolean,
       default: false,
     },
-    name: String,
-    id: String,
-    value: String,
-    placeholder: String,
+    name: {
+      type: String,
+      default: "",
+    },
+    id: {
+      type: String,
+      required: true,
+    },
+    value: {
+      type: String,
+      default: "",
+    },
+    placeholder: {
+      type: String,
+      default: "",
+    },
     type: {
       type: String,
       default: "text",
     },
-    isRequired: Boolean,
+    isRequired: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  mounted() {
+    setMaterialInput();
   },
   methods: {
     getClasses: (size) => {
@@ -76,9 +97,6 @@ export default {
 
       return isValidValue;
     },
-  },
-  mounted() {
-    setMaterialInput();
   },
 };
 </script>
