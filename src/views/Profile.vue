@@ -204,30 +204,30 @@
                 <ul class="list-group">
                   <li class="px-0 border-0 list-group-item">
                     <vmd-switch
-                      class="ps-0"
                       id="flexSwitchCheckDefault"
-                      labelClass="mb-0 text-body text-truncate w-80"
-                      inputClass="ms-0"
+                      class="ps-0 ms-0"
+                      name="flexSwitchCheckDefault"
+                      label-class="mb-0 text-body text-truncate w-80"
                       checked
                       >Email me when someone follows me</vmd-switch
                     >
                   </li>
                   <li class="px-0 border-0 list-group-item">
                     <vmd-switch
-                      class="ps-0"
                       id="flexSwitchCheckDefault1"
-                      labelClass="mb-0 text-body text-truncate w-80"
-                      inputClass="ms-0"
+                      class="ps-0 ms-0"
+                      name="flexSwitchCheckDefault1"
+                      label-class="mb-0 text-body text-truncate w-80"
                       >Email me when someone answers on my post</vmd-switch
                     >
                   </li>
 
                   <li class="px-0 border-0 list-group-item">
                     <vmd-switch
-                      class="ps-0"
                       id="flexSwitchCheckDefault2"
-                      labelClass="mb-0 text-body text-truncate w-80"
-                      inputClass="ms-0"
+                      class="ps-0 ms-0"
+                      name="flexSwitchCheckDefault2"
+                      label-class="mb-0 text-body text-truncate w-80"
                       checked
                       >Email me when someone mentions me</vmd-switch
                     >
@@ -241,29 +241,29 @@
                 <ul class="list-group">
                   <li class="px-0 border-0 list-group-item">
                     <vmd-switch
-                      class="ps-0"
                       id="flexSwitchCheckDefault3"
-                      labelClass="mb-0 text-body text-truncate w-80"
-                      inputClass="ms-0"
+                      class="ps-0 ms-0"
+                      name="flexSwitchCheckDefault3"
+                      label-class="mb-0 text-body text-truncate w-80"
                       >New launches and projects</vmd-switch
                     >
                   </li>
                   <li class="px-0 border-0 list-group-item">
                     <vmd-switch
-                      class="ps-0"
                       id="flexSwitchCheckDefault4"
-                      labelClass="mb-0 text-body text-truncate w-80"
-                      inputClass="ms-0"
+                      class="ps-0 ms-0"
+                      name="flexSwitchCheckDefault4"
+                      label-class="mb-0 text-body text-truncate w-80"
                       checked
                       >Monthly product updates</vmd-switch
                     >
                   </li>
                   <li class="px-0 pb-0 border-0 list-group-item">
                     <vmd-switch
-                      class="ps-0"
                       id="flexSwitchCheckDefault5"
-                      labelClass="mb-0 text-body text-truncate w-80"
-                      inputClass="ms-0"
+                      class="ps-0 ms-0"
+                      name="flexSwitchCheckDefault5"
+                      label-class="mb-0 text-body text-truncate w-80"
                       >Subscribe to newsletter</vmd-switch
                     >
                   </li>
@@ -273,72 +273,34 @@
             <hr class="vertical dark" />
           </div>
           <div class="col-12 col-md-6 col-xl-4 mt-md-0 mt-4 position-relative">
-            <div class="card card-plain h-100">
-              <div class="p-3 pb-0 card-header">
-                <div class="row">
-                  <div class="col-md-8 d-flex align-items-center">
-                    <h6 class="mb-0">Profile Information</h6>
-                  </div>
-                  <div class="col-md-4 text-end">
-                    <a href="javascript:;">
-                      <i
-                        class="text-sm fas fa-user-edit text-secondary"
-                        data-bs-toggle="tooltip"
-                        data-bs-placement="top"
-                        title="Edit Profile"
-                      ></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="p-3 card-body">
-                <p class="text-sm">
-                  Hi, I’m Alec Thompson, Decisions: If you can’t decide, the
-                  answer is no. If two equally difficult paths, choose the one
-                  more painful in the short term (pain avoidance is creating an
-                  illusion of equality).
-                </p>
-                <hr class="my-4 horizontal gray-light" />
-                <ul class="list-group">
-                  <li class="pt-0 text-sm border-0 list-group-item ps-0">
-                    <strong class="text-dark">Full Name:</strong> &nbsp; Alec M.
-                    Thompson
-                  </li>
-                  <li class="text-sm border-0 list-group-item ps-0">
-                    <strong class="text-dark">Mobile:</strong> &nbsp; (44) 123
-                    1234 123
-                  </li>
-                  <li class="text-sm border-0 list-group-item ps-0">
-                    <strong class="text-dark">Email:</strong> &nbsp;
-                    alecthompson@mail.com
-                  </li>
-                  <li class="text-sm border-0 list-group-item ps-0">
-                    <strong class="text-dark">Location:</strong> &nbsp; USA
-                  </li>
-                  <li class="pb-0 border-0 list-group-item ps-0">
-                    <strong class="text-sm text-dark">Social:</strong> &nbsp;
-                    <a
-                      class="py-0 mb-0 btn btn-facebook btn-simple ps-1 pe-2"
-                      href="javascript:;"
-                    >
-                      <i class="fab fa-facebook fa-lg"></i>
-                    </a>
-                    <a
-                      class="py-0 mb-0 btn btn-twitter btn-simple ps-1 pe-2"
-                      href="javascript:;"
-                    >
-                      <i class="fab fa-twitter fa-lg"></i>
-                    </a>
-                    <a
-                      class="py-0 mb-0 btn btn-instagram btn-simple ps-1 pe-2"
-                      href="javascript:;"
-                    >
-                      <i class="fab fa-instagram fa-lg"></i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <profile-info-card
+              title="Profile Information"
+              description="Hi, I’m Alec Thompson, Decisions: If you can’t decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality)."
+              :info="{
+                fullName: 'Alec M. Thompson',
+                mobile: '(44) 123 1234 123',
+                email: 'alecthompson@mail.com',
+                location: 'USA',
+              }"
+              :social="[
+                {
+                  link: 'https://www.facebook.com/CreativeTim/',
+                  icon: 'fa-facebook',
+                },
+                {
+                  link: 'https://twitter.com/creativetim',
+                  icon: 'fa-twitter',
+                },
+                {
+                  link: 'https://www.instagram.com/creativetimofficial/',
+                  icon: 'fa-instagram',
+                },
+              ]"
+              :action="{
+                route: 'javascript:;',
+                tooltip: 'Edit Profile',
+              }"
+            />
             <hr class="vertical dark" />
           </div>
           <div class="mt-4 col-12 col-xl-4 mt-xl-0">
@@ -355,7 +317,7 @@
                       class="me-3"
                       :img="sophie"
                       alt="kal"
-                      borderRadius="lg"
+                      border-radius="lg"
                       shadow="regular"
                     />
                     <div
@@ -377,7 +339,7 @@
                       class="me-3"
                       :img="marie"
                       alt="kal"
-                      borderRadius="lg"
+                      border-radius="lg"
                       shadow="regular"
                     />
                     <div
@@ -399,7 +361,7 @@
                       class="me-3"
                       :img="ivana"
                       alt="kal"
-                      borderRadius="lg"
+                      border-radius="lg"
                       shadow="regular"
                     />
                     <div
@@ -421,7 +383,7 @@
                       class="me-3"
                       :img="peterson"
                       alt="kal"
-                      borderRadius="lg"
+                      border-radius="lg"
                       shadow="regular"
                     />
                     <div
@@ -443,7 +405,7 @@
                       class="me-3"
                       :img="nick"
                       alt="kal"
-                      borderRadius="lg"
+                      border-radius="lg"
                       shadow="regular"
                     />
                     <div
@@ -470,338 +432,124 @@
               <p class="text-sm">Architects design houses</p>
             </div>
             <div class="row">
-              <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                <div class="card card-blog card-plain">
-                  <div class="card-header p-0 mt-n4 mx-3">
-                    <a class="d-block shadow-xl border-radius-xl">
-                      <img
-                        src="@/assets/img/home-decor-1.jpg"
-                        alt="img-blur-shadow"
-                        class="img-fluid shadow border-radius-xl"
-                      />
-                    </a>
-                  </div>
-                  <div class="card-body p-3">
-                    <p class="mb-0 text-sm">Project #2</p>
-                    <a href="javascript:;">
-                      <h5>Modern</h5>
-                    </a>
-                    <p class="mb-4 text-sm">
-                      As Uber works through a huge amount of internal management
-                      turmoil.
-                    </p>
-                    <div
-                      class="d-flex align-items-center justify-content-between"
-                    >
-                      <button
-                        type="button"
-                        class="btn btn-outline-success btn-sm mb-0"
-                      >
-                        View Project
-                      </button>
-                      <div class="avatar-group mt-2">
-                        <a
-                          href="javascript:;"
-                          class="avatar avatar-xs rounded-circle"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Elena Morison"
-                        >
-                          <img
-                            alt="Image placeholder"
-                            src="@/assets/img/team-1.jpg"
-                          />
-                        </a>
-                        <a
-                          href="javascript:;"
-                          class="avatar avatar-xs rounded-circle"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Ryan Milly"
-                        >
-                          <img
-                            alt="Image placeholder"
-                            src="@/assets/img/team-2.jpg"
-                          />
-                        </a>
-                        <a
-                          href="javascript:;"
-                          class="avatar avatar-xs rounded-circle"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Nick Daniel"
-                        >
-                          <img
-                            alt="Image placeholder"
-                            src="@/assets/img/team-3.jpg"
-                          />
-                        </a>
-                        <a
-                          href="javascript:;"
-                          class="avatar avatar-xs rounded-circle"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Peterson"
-                        >
-                          <img
-                            alt="Image placeholder"
-                            src="@/assets/img/team-4.jpg"
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                <div class="card card-blog card-plain">
-                  <div class="card-header p-0 mt-n4 mx-3">
-                    <a class="d-block shadow-xl border-radius-xl">
-                      <img
-                        src="@/assets/img/home-decor-2.jpg"
-                        alt="img-blur-shadow"
-                        class="img-fluid shadow border-radius-lg"
-                      />
-                    </a>
-                  </div>
-                  <div class="card-body p-3">
-                    <p class="mb-0 text-sm">Project #1</p>
-                    <a href="javascript:;">
-                      <h5>Scandinavian</h5>
-                    </a>
-                    <p class="mb-4 text-sm">
-                      Music is something that every person has his or her own
-                      specific opinion about.
-                    </p>
-                    <div
-                      class="d-flex align-items-center justify-content-between"
-                    >
-                      <button
-                        type="button"
-                        class="btn btn-outline-success btn-sm mb-0"
-                      >
-                        View Project
-                      </button>
-                      <div class="avatar-group mt-2">
-                        <a
-                          href="javascript:;"
-                          class="avatar avatar-xs rounded-circle"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Nick Daniel"
-                        >
-                          <img
-                            alt="Image placeholder"
-                            src="@/assets/img/team-3.jpg"
-                          />
-                        </a>
-                        <a
-                          href="javascript:;"
-                          class="avatar avatar-xs rounded-circle"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Peterson"
-                        >
-                          <img
-                            alt="Image placeholder"
-                            src="@/assets/img/team-4.jpg"
-                          />
-                        </a>
-                        <a
-                          href="javascript:;"
-                          class="avatar avatar-xs rounded-circle"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Elena Morison"
-                        >
-                          <img
-                            alt="Image placeholder"
-                            src="@/assets/img/team-1.jpg"
-                          />
-                        </a>
-                        <a
-                          href="javascript:;"
-                          class="avatar avatar-xs rounded-circle"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Ryan Milly"
-                        >
-                          <img
-                            alt="Image placeholder"
-                            src="@/assets/img/team-2.jpg"
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                <div class="card card-blog card-plain">
-                  <div class="card-header p-0 mt-n4 mx-3">
-                    <a class="d-block shadow-xl border-radius-xl">
-                      <img
-                        src="@/assets/img/home-decor-3.jpg"
-                        alt="img-blur-shadow"
-                        class="img-fluid shadow border-radius-xl"
-                      />
-                    </a>
-                  </div>
-                  <div class="card-body p-3">
-                    <p class="mb-0 text-sm">Project #3</p>
-                    <a href="javascript:;">
-                      <h5>Minimalist</h5>
-                    </a>
-                    <p class="mb-4 text-sm">
-                      Different people have different taste, and various types
-                      of music.
-                    </p>
-                    <div
-                      class="d-flex align-items-center justify-content-between"
-                    >
-                      <button
-                        type="button"
-                        class="btn btn-outline-success btn-sm mb-0"
-                      >
-                        View Project
-                      </button>
-                      <div class="avatar-group mt-2">
-                        <a
-                          href="javascript:;"
-                          class="avatar avatar-xs rounded-circle"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Peterson"
-                        >
-                          <img
-                            alt="Image placeholder"
-                            src="@/assets/img/team-4.jpg"
-                          />
-                        </a>
-                        <a
-                          href="javascript:;"
-                          class="avatar avatar-xs rounded-circle"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Nick Daniel"
-                        >
-                          <img
-                            alt="Image placeholder"
-                            src="@/assets/img/team-3.jpg"
-                          />
-                        </a>
-                        <a
-                          href="javascript:;"
-                          class="avatar avatar-xs rounded-circle"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Ryan Milly"
-                        >
-                          <img
-                            alt="Image placeholder"
-                            src="@/assets/img/team-2.jpg"
-                          />
-                        </a>
-                        <a
-                          href="javascript:;"
-                          class="avatar avatar-xs rounded-circle"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Elena Morison"
-                        >
-                          <img
-                            alt="Image placeholder"
-                            src="@/assets/img/team-1.jpg"
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-xl-3 col-md-6 mb-xl-0 mb-4">
-                <div class="card card-blog card-plain">
-                  <div class="card-header p-0 mt-n4 mx-3">
-                    <a class="d-block shadow-xl border-radius-xl">
-                      <img
-                        src="https://images.unsplash.com/photo-1606744824163-985d376605aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                        alt="img-blur-shadow"
-                        class="img-fluid shadow border-radius-xl"
-                      />
-                    </a>
-                  </div>
-                  <div class="card-body p-3">
-                    <p class="mb-0 text-sm">Project #4</p>
-                    <a href="javascript:;">
-                      <h5>Gothic</h5>
-                    </a>
-                    <p class="mb-4 text-sm">
-                      Why would anyone pick blue over pink? Pink is obviously a
-                      better color.
-                    </p>
-                    <div
-                      class="d-flex align-items-center justify-content-between"
-                    >
-                      <button
-                        type="button"
-                        class="btn btn-outline-success btn-sm mb-0"
-                      >
-                        View Project
-                      </button>
-                      <div class="avatar-group mt-2">
-                        <a
-                          href="javascript:;"
-                          class="avatar avatar-xs rounded-circle"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Peterson"
-                        >
-                          <img
-                            alt="Image placeholder"
-                            src="@/assets/img/team-4.jpg"
-                          />
-                        </a>
-                        <a
-                          href="javascript:;"
-                          class="avatar avatar-xs rounded-circle"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Nick Daniel"
-                        >
-                          <img
-                            alt="Image placeholder"
-                            src="@/assets/img/team-3.jpg"
-                          />
-                        </a>
-                        <a
-                          href="javascript:;"
-                          class="avatar avatar-xs rounded-circle"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Ryan Milly"
-                        >
-                          <img
-                            alt="Image placeholder"
-                            src="@/assets/img/team-2.jpg"
-                          />
-                        </a>
-                        <a
-                          href="javascript:;"
-                          class="avatar avatar-xs rounded-circle"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="bottom"
-                          title="Elena Morison"
-                        >
-                          <img
-                            alt="Image placeholder"
-                            src="@/assets/img/team-1.jpg"
-                          />
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <default-project-card
+                title="Modern"
+                :image="img1"
+                label="Project #2"
+                description="As Uber works through a huge amount of internal
+                management turmoil."
+                :authors="[
+                  {
+                    image: team1,
+                    name: 'Elena Morison',
+                  },
+                  {
+                    image: team2,
+                    name: 'Ryan Milly',
+                  },
+                  {
+                    image: team3,
+                    name: 'Nick Daniel',
+                  },
+                  {
+                    image: team4,
+                    name: 'Peterson',
+                  },
+                ]"
+                :action="{
+                  color: 'success',
+                  label: 'View Project',
+                }"
+              />
+
+              <default-project-card
+                title="Scandinavian"
+                :image="img2"
+                label="Project #1"
+                description="Music is something that every person has his or her own
+                      specific opinion about."
+                :authors="[
+                  {
+                    image: team3,
+                    name: 'Nick Daniel',
+                  },
+                  {
+                    image: team4,
+                    name: 'Peterson',
+                  },
+                  {
+                    image: team1,
+                    name: 'Elena Morison',
+                  },
+                  {
+                    image: team2,
+                    name: 'Ryan Milly',
+                  },
+                ]"
+                :action="{
+                  color: 'success',
+                  label: 'View Project',
+                }"
+              />
+
+              <default-project-card
+                title="Minimalist"
+                :image="img3"
+                label="Project #3"
+                description="Different people have different taste, and various types
+                      of music."
+                :authors="[
+                  {
+                    image: team4,
+                    name: 'Peterson',
+                  },
+                  {
+                    image: team3,
+                    name: 'Nick Daniel',
+                  },
+                  {
+                    image: team1,
+                    name: 'Elena Morison',
+                  },
+                  {
+                    image: team2,
+                    name: 'Ryan Milly',
+                  },
+                ]"
+                :action="{
+                  color: 'success',
+                  label: 'View Project',
+                }"
+              />
+              <default-project-card
+                title="Gothic"
+                image="https://images.unsplash.com/photo-1606744824163-985d376605aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                label="Project #4"
+                description="Why would anyone pick blue over pink? Pink is obviously a
+                      better color."
+                :authors="[
+                  {
+                    image: team4,
+                    name: 'Peterson',
+                  },
+                  {
+                    image: team3,
+                    name: 'Nick Daniel',
+                  },
+                  {
+                    image: team2,
+                    name: 'Ryan Milly',
+                  },
+                  {
+                    image: team1,
+                    name: 'Elena Morison',
+                  },
+                ]"
+                :action="{
+                  color: 'success',
+                  label: 'View Project',
+                }"
+              />
             </div>
           </div>
         </div>
@@ -811,6 +559,8 @@
 </template>
 
 <script>
+import ProfileInfoCard from "./components/ProfileInfoCard.vue";
+import DefaultProjectCard from "./components/DefaultProjectCard.vue";
 import VmdSwitch from "@/components/VmdSwitch.vue";
 import VmdAvatar from "@/components/VmdAvatar.vue";
 import sophie from "@/assets/img/kal-visuals-square.jpg";
@@ -849,6 +599,8 @@ export default {
     };
   },
   components: {
+    ProfileInfoCard,
+    DefaultProjectCard,
     VmdSwitch,
     VmdAvatar,
   },
