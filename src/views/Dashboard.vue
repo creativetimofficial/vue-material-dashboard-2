@@ -50,13 +50,78 @@
         </div>
         <div class="row mt-4">
           <div class="col-lg-4 col-md-6 mt-4">
-            <chart-bars />
+            <chart-holder-card
+              title="Website Views"
+              subtitle="Last Campaign Performance"
+              update="campaign sent 2 days ago"
+            >
+              <reports-bar-chart
+                :chart="{
+                  labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+                  datasets: {
+                    label: 'Sales',
+                    data: [50, 20, 10, 22, 50, 10, 40],
+                  },
+                }"
+              />
+            </chart-holder-card>
           </div>
           <div class="col-lg-4 col-md-6 mt-4">
-            <chart-line />
+            <chart-holder-card
+              title="Daily Sales"
+              subtitle="(<span class='font-weight-bolder'>+15%</span>) increase in today sales."
+              update="updated 4 min ago"
+              color="success"
+            >
+              <reports-line-chart
+                :chart="{
+                  labels: [
+                    'Apr',
+                    'May',
+                    'Jun',
+                    'Jul',
+                    'Aug',
+                    'Sep',
+                    'Oct',
+                    'Nov',
+                    'Dec',
+                  ],
+                  datasets: {
+                    label: 'Mobile apps',
+                    data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+                  },
+                }"
+              />
+            </chart-holder-card>
           </div>
           <div class="col-lg-4 mt-4">
-            <chart-line-tasks />
+            <chart-holder-card
+              title="Completed Tasks"
+              subtitle="Last Campaign Performance"
+              update="just updated"
+              color="dark"
+            >
+              <reports-line-chart
+                id="tasks-chart"
+                :chart="{
+                  labels: [
+                    'Apr',
+                    'May',
+                    'Jun',
+                    'Jul',
+                    'Aug',
+                    'Sep',
+                    'Oct',
+                    'Nov',
+                    'Dec',
+                  ],
+                  datasets: {
+                    label: 'Mobile apps',
+                    data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
+                  },
+                }"
+              />
+            </chart-holder-card>
           </div>
         </div>
       </div>
@@ -73,9 +138,9 @@
   </div>
 </template>
 <script>
-import ChartBars from "./components/ChartBars.vue";
-import ChartLine from "./components/ChartLine.vue";
-import ChartLineTasks from "./components/ChartLineTasks.vue";
+import ChartHolderCard from "./components/ChartHolderCard.vue";
+import ReportsBarChart from "@/examples/Charts/ReportsBarChart.vue";
+import ReportsLineChart from "@/examples/Charts/ReportsLineChart.vue";
 import MiniStatisticsCard from "./components/MiniStatisticsCard.vue";
 import ProjectsCard from "./components/ProjectsCard.vue";
 import OrdersCard from "./components/OrdersCard.vue";
@@ -83,9 +148,9 @@ import OrdersCard from "./components/OrdersCard.vue";
 export default {
   name: "dashboard-default",
   components: {
-    ChartBars,
-    ChartLine,
-    ChartLineTasks,
+    ChartHolderCard,
+    ReportsBarChart,
+    ReportsLineChart,
     MiniStatisticsCard,
     ProjectsCard,
     OrdersCard,
