@@ -10,17 +10,20 @@
 
 <script>
 export default {
-  name: "vmd-progress",
+  name: "VmdProgress",
   props: {
     color: {
       type: String,
-      default: "primary",
+      default: "success",
     },
     variant: {
       type: String,
       default: "fill",
     },
-    percentage: String,
+    percentage: {
+      type: Number,
+      required: true,
+    },
   },
   methods: {
     getClasses: (color, variant) => {

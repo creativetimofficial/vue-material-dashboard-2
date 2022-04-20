@@ -15,20 +15,18 @@
             <div class="row">
               <div class="col-md-6">
                 <default-info-card
-                  :classIcon="salary.classIcon"
-                  :title="salary.title"
-                  :desc="salary.desc"
-                  :price="salary.price"
-                  :iconName="salary.iconName"
+                  icon="account_balance"
+                  title="Salary"
+                  description="Belong Interactive"
+                  value="+$2000"
                 />
               </div>
               <div class="col-md-6">
                 <default-info-card
-                  :classIcon="paypal.classIcon"
-                  :title="paypal.title"
-                  :desc="paypal.desc"
-                  :price="paypal.price"
-                  :iconName="paypal.iconName"
+                  icon="account_balance_wallet"
+                  title="Paypal"
+                  description="Freelance Payment"
+                  value="$455.00"
                 />
               </div>
             </div>
@@ -72,24 +70,6 @@ export default {
     InvoiceCard,
     BillingCard,
     TransactionCard,
-  },
-  data() {
-    return {
-      salary: {
-        iconName: "account_balance",
-        classIcon: "text-white",
-        title: "Salary",
-        desc: "Belong Interactive",
-        price: "+$2000",
-      },
-      paypal: {
-        iconName: "account_balance_wallet",
-        classIcon: "text-white",
-        title: "Paypal",
-        desc: "Freelance Payment",
-        price: "$455.00",
-      },
-    };
   },
 };
 </script>

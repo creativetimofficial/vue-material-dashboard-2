@@ -25,13 +25,16 @@
 
 <script>
 export default {
-  name: "vmd-alert",
+  name: "VmdAlert",
   props: {
     color: {
       type: String,
       default: "success",
     },
-    icon: String,
+    icon: {
+      type: String,
+      default: "",
+    },
     dismissible: {
       type: Boolean,
       default: false,

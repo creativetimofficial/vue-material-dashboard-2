@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 <template>
   <button
     class="btn mb-0"
@@ -10,11 +9,11 @@
 
 <script>
 export default {
-  name: "vmd-button",
+  name: "VmdButton",
   props: {
     color: {
       type: String,
-      default: "info",
+      default: "success",
     },
     size: {
       type: String,

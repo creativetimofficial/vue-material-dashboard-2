@@ -5,7 +5,7 @@
       data-bs-toggle="collapse"
       aria-expanded="false"
       :href="`#${refer}`"
-      @click="this.isExpanded = !this.isExpanded"
+      @click="isExpanded = !isExpanded"
     >
       <span class="sidenav-mini-icon"> {{ miniIcon }} </span>
       <span class="sidenav-normal me-3 ms-2 ps-1">
@@ -22,7 +22,7 @@
 
 <script>
 export default {
-  name: "sidenav-collapse-item",
+  name: "SidenavCollapseItem",
   props: {
     refer: {
       type: String,

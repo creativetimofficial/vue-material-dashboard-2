@@ -1,10 +1,10 @@
 <template>
   <div class="form-check p-0">
     <input
+      :id="id"
       class="form-check-input"
       type="checkbox"
       :name="name"
-      :id="id"
       :checked="checked"
     />
     <label :for="id" class="custom-control-label">
@@ -15,11 +15,17 @@
 
 <script>
 export default {
-  name: "vmd-checkbox",
+  name: "VmdCheckbox",
   props: {
-    name: String,
-    id: String,
-    checked: String,
+    name: {
+      type: String,
+      default: "",
+    },
+    id: {
+      type: String,
+      default: "",
+    },
+    checked: Boolean,
   },
 };
 </script>

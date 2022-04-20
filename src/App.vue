@@ -1,27 +1,38 @@
+<!--
+=========================================================
+* Vue Material Dashboard 2 - v2.0.0
+=========================================================
+
+* Product Page: https://creative-tim.com/product/vue-material-dashboard-2
+* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+
+Coded by www.creative-tim.com
+
+ =========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
 <template>
   <sidenav
-    :custom_class="this.$store.state.mcolor"
-    :class="[this.$store.state.isRTL ? 'fixed-end' : 'fixed-start']"
-    v-if="this.$store.state.showSidenav"
+    :custom_class="color"
+    :class="[isRTL ? 'fixed-end' : 'fixed-start']"
+    v-if="showSidenav"
   />
   <main
     class="main-content position-relative max-height-vh-100 h-100 overflow-x-hidden"
   >
     <!-- nav -->
     <navbar
-      :class="[navClasses]"
-      :textWhite="this.$store.state.isAbsolute ? 'text-white opacity-8' : ''"
+      :class="[isNavFixed ? navbarFixed : '', isAbsolute ? absolute : '']"
+      :color="isAbsolute ? 'text-white opacity-8' : ''"
       :minNav="navbarMinimize"
-      v-if="this.$store.state.showNavbar"
+      v-if="showNavbar"
     />
     <router-view />
-    <app-footer v-show="this.$store.state.showFooter" />
+    <app-footer v-show="showFooter" />
     <configurator
       :toggle="toggleConfigurator"
-      :class="[
-        this.$store.state.showConfig ? 'show' : '',
-        this.$store.state.hideConfigButton ? 'd-none' : '',
-      ]"
+      :class="[showConfig ? 'show' : '', hideConfigButton ? 'd-none' : '']"
     />
   </main>
 </template>
@@ -30,7 +41,7 @@ import Sidenav from "./examples/Sidenav";
 import Configurator from "@/examples/Configurator.vue";
 import Navbar from "@/examples/Navbars/Navbar.vue";
 import AppFooter from "@/examples/Footer.vue";
-import { mapMutations } from "vuex";
+import { mapMutations, mapState } from "vuex";
 
 export default {
   name: "App",
@@ -38,21 +49,25 @@ export default {
     Sidenav,
     Configurator,
     Navbar,
-    AppFooter,
+    AppFooter
   },
   methods: {
-    ...mapMutations(["toggleConfigurator", "navbarMinimize"]),
+    ...mapMutations(["toggleConfigurator", "navbarMinimize"])
   },
   computed: {
-    navClasses() {
-      return {
-        "position-sticky blur shadow-blur mt-4 left-auto top-1 z-index-sticky": this
-          .$store.state.isNavFixed,
-        "position-absolute px-4 mx-0 w-100 z-index-2": this.$store.state
-          .isAbsolute,
-        "px-0 mx-4 mt-4": !this.$store.state.isAbsolute,
-      };
-    },
+    ...mapState([
+      "isRTL",
+      "color",
+      "isAbsolute",
+      "isNavFixed",
+      "navbarFixed",
+      "absolute",
+      "showSidenav",
+      "showNavbar",
+      "showFooter",
+      "showConfig",
+      "hideConfigButton"
+    ])
   },
   beforeMount() {
     this.$store.state.isTransparent = "bg-transparent";
@@ -62,6 +77,6 @@ export default {
     if (window.innerWidth > 1200) {
       sidenav.classList.add("g-sidenav-pinned");
     }
-  },
+  }
 };
 </script>

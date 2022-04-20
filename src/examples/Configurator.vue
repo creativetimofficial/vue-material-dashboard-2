@@ -28,7 +28,7 @@
         <a href="#" class="switch-trigger background-color">
           <div
             class="my-2 badge-colors"
-            :class="this.$store.state.isRTL ? 'text-end' : ' text-start'"
+            :class="isRTL ? 'text-end' : ' text-start'"
           >
             <span
               class="badge filter bg-gradient-primary"
@@ -71,32 +71,24 @@
           <button
             id="btn-dark"
             class="px-3 mb-2 btn bg-gradient-dark"
-            :class="
-              this.$store.state.sidebarType === 'bg-gradient-dark'
-                ? 'active'
-                : ''
-            "
-            @click="sidebarType('bg-gradient-dark')"
+            :class="sidebarType === 'bg-gradient-dark' ? 'active' : ''"
+            @click="sidebar('bg-gradient-dark')"
           >
             Dark
           </button>
           <button
             id="btn-transparent"
             class="px-3 mb-2 btn bg-gradient-dark ms-2"
-            :class="
-              this.$store.state.sidebarType === 'bg-transparent' ? 'active' : ''
-            "
-            @click="sidebarType('bg-transparent')"
+            :class="sidebarType === 'bg-transparent' ? 'active' : ''"
+            @click="sidebar('bg-transparent')"
           >
             Transparent
           </button>
           <button
             id="btn-white"
             class="px-3 mb-2 btn bg-gradient-dark ms-2"
-            :class="
-              this.$store.state.sidebarType === 'bg-white' ? 'active' : ''
-            "
-            @click="sidebarType('bg-white')"
+            :class="sidebarType === 'bg-white' ? 'active' : ''"
+            @click="sidebar('bg-white')"
           >
             White
           </button>
@@ -148,21 +140,22 @@
 </template>
 
 <script>
-import { mapMutations } from "vuex";
+import { mapMutations, mapState, mapActions } from "vuex";
 import { activateDarkMode, deactivateDarkMode } from "@/assets/js/dark-mode";
 
 export default {
   name: "configurator",
   props: ["toggle"],
   methods: {
-    ...mapMutations(["navbarMinimize", "sidebarType", "navbarFixed"]),
+    ...mapMutations(["navbarMinimize", "navbarFixed"]),
+    ...mapActions(["setColor"]),
 
     sidebarColor(color = "success") {
       document.querySelector("#sidenav-main").setAttribute("data-color", color);
-      this.$store.state.mcolor = color;
+      this.setColor(color);
     },
 
-    sidebarType(type) {
+    sidebar(type) {
       this.$store.state.sidebarType = type;
     },
 
@@ -199,6 +192,7 @@ export default {
     },
   },
   computed: {
+    ...mapState(["isRTL", "sidebarType"]),
     sidenavResponsive() {
       return this.sidenavTypeOnResize;
     },

@@ -1,7 +1,9 @@
 <template>
   <div class="toast fade show p-2 mt-2" :class="getColor(color)">
     <div class="toast-header bg-transparent border-0">
-      <i class="material-icons me-2" :class="getIcon(iconColor)">{{ icon }}</i>
+      <i class="material-icons me-2" :class="getIcon(icon.color)">{{
+        icon.component
+      }}</i>
       <span class="me-auto font-weight-bold" :class="getTextColor(color)">
         {{ title }}
       </span>
@@ -19,24 +21,34 @@
 
 <script>
 export default {
-  name: "vmd-snackbar",
+  name: "VmdSnackbar",
   props: {
-    title: String,
-    date: String,
-    description: String,
-    icon: String,
+    title: {
+      type: String,
+      required: true,
+    },
+    date: {
+      type: String,
+      default: "",
+    },
+    description: {
+      type: String,
+      default: "",
+    },
+    icon: {
+      type: Object,
+      component: String,
+      color: String,
+      default: () => {},
+    },
     color: {
       type: String,
       default: "success",
     },
-    iconColor: {
-      type: String,
-      default: "success",
-    },
-    closeHandler: Function,
-    iconName: {
-      type: String,
-      required: true,
+
+    closeHandler: {
+      type: Function,
+      default: () => {},
     },
   },
   methods: {

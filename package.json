@@ -1,6 +1,18 @@
 {
   "name": "vue-material-dashboard-2",
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "private": true,
+  "author": "Creative Tim",
+  "license": "SEE LICENSE IN <https://www.creative-tim.com/license>",
+  "description": "VueJS version of Material Dashboard 2 by Creative Tim",
+  "homepage": "https://demos.creative-tim.com/vue-material-dashboard-2/",
+  "bugs": {
+    "url": "https://github.com/creativetimofficial/vue-material-dashboard-2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creativetimofficial/ct-vue-material-dashboard-2.git"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -12,8 +24,8 @@
     "chart.js": "3.6.0",
     "core-js": "3.6.5",
     "vue": "3.2.0",
-    "vue-router": "^4.0.0-0",
-    "vuex": "^4.0.2"
+    "vue-router": "4.0.14",
+    "vuex": "4.0.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

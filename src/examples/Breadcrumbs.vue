@@ -2,42 +2,45 @@
   <nav aria-label="breadcrumb">
     <ol
       class="px-0 pt-1 pb-0 mb-0 bg-transparent breadcrumb"
-      :class="this.$store.state.isRTL ? '' : ' me-sm-6'"
+      :class="isRTL ? '' : ' me-sm-6'"
     >
-      <li class="text-sm breadcrumb-item" :class="textWhite">
-        <a
-          v-if="this.$store.state.isRTL"
-          :class="textWhite"
-          class="opacity-5 ps-2"
-          href="#"
+      <li class="text-sm breadcrumb-item" :class="color">
+        <a v-if="isRTL" :class="color" class="opacity-5 ps-2" href="#"
           >لوحات القيادة</a
         >
-        <a v-else :class="textWhite" class="opacity-8" href="#">Pages</a>
+        <a v-else :class="color" class="opacity-8" href="#">Pages</a>
       </li>
       <li
         class="text-sm breadcrumb-item active"
-        :class="textWhite ? 'text-white' : 'text-dark'"
+        :class="color"
         aria-current="page"
       >
         {{ currentPage }}
       </li>
     </ol>
-    <h6 class="mb-0 font-weight-bolder" :class="textWhite ? 'text-white' : ''">
+    <h6 class="mb-0 font-weight-bolder" :class="color">
       {{ currentPage }}
     </h6>
   </nav>
 </template>
 
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: "breadcrumbs",
   props: {
     currentPage: {
-      required: true,
-    },
-    textWhite: {
       type: String,
+      required: "",
     },
+    color: {
+      type: String,
+      default: "text-dark",
+    },
+  },
+  computed: {
+    ...mapState(["isRTL"]),
   },
 };
 </script>

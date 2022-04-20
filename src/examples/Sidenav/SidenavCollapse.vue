@@ -1,38 +1,34 @@
 <template>
-  <a
+  <router-link
     :data-bs-toggle="collapse ? 'collapse' : ''"
-    :href="collapse ? `#${collapseRef}` : collapseRef"
+    :to="collapse ? `#${collapseRef}` : collapseRef"
     :aria-controls="collapseRef"
     :aria-expanded="isExpanded"
     class="nav-link"
-    :class="
-      getRoute() === collapseRef
-        ? `active bg-gradient-${this.$store.state.mcolor}`
-        : ''
-    "
+    :class="getRoute() === collapseRef ? `active bg-gradient-${color}` : ''"
     v-bind="$attrs"
     type="button"
-    @click="this.isExpanded = !this.isExpanded"
+    @click="isExpanded = !isExpanded"
   >
     <div
       class="text-center d-flex align-items-center justify-content-center"
-      :class="this.$store.state.isRTL ? ' ms-2' : 'me-2'"
+      :class="isRTL ? ' ms-2' : 'me-2'"
     >
       <slot name="icon"></slot>
     </div>
-    <span
-      class="nav-link-text"
-      :class="this.$store.state.isRTL ? ' me-1' : 'ms-1'"
-      >{{ navText }}</span
-    >
-  </a>
+    <span class="nav-link-text" :class="isRTL ? ' me-1' : 'ms-1'">{{
+      navText
+    }}</span>
+  </router-link>
   <div :class="isExpanded ? 'collapse show' : 'collapse'">
     <slot name="list"></slot>
   </div>
 </template>
 <script>
+import { mapState } from "vuex";
+
 export default {
-  name: "sidenav-collapse",
+  name: "SidenavCollapse",
   props: {
     collapseRef: {
       type: String,
@@ -57,6 +53,9 @@ export default {
       const routeArr = this.$route.path.split("/");
       return routeArr[1];
     },
+  },
+  computed: {
+    ...mapState(["isRTL", "color"]),
   },
 };
 </script>

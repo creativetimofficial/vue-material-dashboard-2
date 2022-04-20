@@ -40,12 +40,24 @@
             <div class="card-body">
               <form role="form" class="text-start mt-3">
                 <div class="mb-3">
-                  <vmd-input type="email" label="Email" name="email" />
+                  <vmd-input
+                    id="email"
+                    type="email"
+                    label="Email"
+                    name="email"
+                  />
                 </div>
                 <div class="mb-3">
-                  <vmd-input type="password" label="Password" name="password" />
+                  <vmd-input
+                    id="password"
+                    type="password"
+                    label="Password"
+                    name="password"
+                  />
                 </div>
-                <vmd-switch id="rememberMe">Remember me</vmd-switch>
+                <vmd-switch id="rememberMe" name="rememberMe"
+                  >Remember me</vmd-switch
+                >
                 <div class="text-center">
                   <vmd-button
                     class="my-4 mb-2"
@@ -134,6 +146,7 @@ import Navbar from "@/examples/PageLayout/Navbar.vue";
 import VmdInput from "@/components/VmdInput.vue";
 import VmdSwitch from "@/components/VmdSwitch.vue";
 import VmdButton from "@/components/VmdButton.vue";
+import { mapMutations } from "vuex";
 
 export default {
   name: "sign-in",
@@ -144,16 +157,15 @@ export default {
     VmdButton,
   },
   beforeMount() {
-    this.$store.state.hideConfigButton = true;
-    this.$store.state.showNavbar = false;
-    this.$store.state.showSidenav = false;
-    this.$store.state.showFooter = false;
+    this.toggleEveryDisplay();
+    this.toggleHideConfig();
   },
   beforeUnmount() {
-    this.$store.state.hideConfigButton = false;
-    this.$store.state.showNavbar = true;
-    this.$store.state.showSidenav = true;
-    this.$store.state.showFooter = true;
+    this.toggleEveryDisplay();
+    this.toggleHideConfig();
+  },
+  methods: {
+    ...mapMutations(["toggleEveryDisplay", "toggleHideConfig"]),
   },
 };
 </script>
