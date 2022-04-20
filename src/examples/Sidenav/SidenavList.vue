@@ -125,7 +125,6 @@
           class="btn mt-4 w-100"
           :class="`bg-gradient-${this.$store.state.color}`"
           href="https://www.creative-tim.com/product/vue-material-dashboard-2-pro"
-          type="button"
           >Upgrade to pro</a
         >
       </div>
