@@ -7,7 +7,6 @@
     class="nav-link"
     :class="getRoute() === collapseRef ? `active bg-gradient-${color}` : ''"
     v-bind="$attrs"
-    type="button"
     @click="isExpanded = !isExpanded"
   >
     <div
@@ -32,30 +31,30 @@ export default {
   props: {
     collapseRef: {
       type: String,
-      required: true,
+      required: true
     },
     navText: {
       type: String,
-      required: true,
+      required: true
     },
     collapse: {
       type: Boolean,
-      default: true,
-    },
+      default: true
+    }
   },
   data() {
     return {
-      isExpanded: false,
+      isExpanded: false
     };
   },
   methods: {
     getRoute() {
       const routeArr = this.$route.path.split("/");
       return routeArr[1];
-    },
+    }
   },
   computed: {
-    ...mapState(["isRTL", "color"]),
-  },
+    ...mapState(["isRTL", "color"])
+  }
 };
 </script>
