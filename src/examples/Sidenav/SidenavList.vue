@@ -123,7 +123,7 @@
       <div class="mx-3">
         <a
           class="btn mt-4 w-100"
-          :class="`bg-gradient-${this.$store.state.mcolor}`"
+          :class="`bg-gradient-${this.$store.state.color}`"
           href="https://www.creative-tim.com/product/vue-material-dashboard-2-pro"
           type="button"
           >Upgrade to pro</a
@@ -138,17 +138,17 @@ import SidenavCollapse from "./SidenavCollapse.vue";
 export default {
   name: "SidenavList",
   props: {
-    cardBg: String,
+    cardBg: String
   },
   data() {
     return {
       title: "Soft UI Dashboard PRO",
       controls: "dashboardsExamples",
-      isActive: "active",
+      isActive: "active"
     };
   },
   components: {
-    SidenavCollapse,
-  },
+    SidenavCollapse
+  }
 };
 </script>
