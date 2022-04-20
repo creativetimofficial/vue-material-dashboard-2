@@ -142,7 +142,7 @@ export default {
   },
   data() {
     return {
-      title: "Soft UI Dashboard PRO",
+      title: "Material Dashboard 2",
       controls: "dashboardsExamples",
       isActive: "active"
     };
