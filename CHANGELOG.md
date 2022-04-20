@@ -1,3 +1,5 @@
+# Change Log
+
 ## [2.0.0] 2022-04-20
 
 ### Bug fixing
@@ -116,8 +118,6 @@ DefaultProjectCard
 "vue-router" "4.0.0-0" -> "4.0.14"
 
 ### Warning
-
-# Change Log
 
 ## [1.0.0] 2022-03-04
 
