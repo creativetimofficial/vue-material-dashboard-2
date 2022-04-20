@@ -113,6 +113,8 @@ DefaultProjectCard
 
 ### Updated dependencies
 
+"vue-router" "4.0.0-0" -> "4.0.14"
+
 ### Warning
 
 # Change Log
