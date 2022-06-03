@@ -31,7 +31,7 @@
             class="w-20 d-flex align-items-end justify-content-end"
             :class="isRTL ? 'me-auto' : 'ms-auto'"
           >
-            <vmd-avatar class="w-60 mt-2" :img="img1" alt="logo" />
+            <material-avatar class="w-60 mt-2" :img="img1" alt="logo" />
           </div>
         </div>
       </div>
@@ -40,14 +40,14 @@
 </template>
 
 <script>
-import VmdAvatar from "@/components/VmdAvatar.vue";
+import MaterialAvatar from "@/components/MaterialAvatar.vue";
 import { mapState } from "vuex";
 import img1 from "../../assets/img/logos/mastercard.png";
 
 export default {
   name: "MasterCard",
   components: {
-    VmdAvatar,
+    MaterialAvatar,
   },
   props: {
     card: {

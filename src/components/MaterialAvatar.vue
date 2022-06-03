@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "VmdAvatar",
+  name: "MaterialAvatar",
   props: {
     img: {
       type: String,

@@ -40,7 +40,7 @@
             <div class="card-body">
               <form role="form" class="text-start mt-3">
                 <div class="mb-3">
-                  <vmd-input
+                  <material-input
                     id="email"
                     type="email"
                     label="Email"
@@ -48,23 +48,23 @@
                   />
                 </div>
                 <div class="mb-3">
-                  <vmd-input
+                  <material-input
                     id="password"
                     type="password"
                     label="Password"
                     name="password"
                   />
                 </div>
-                <vmd-switch id="rememberMe" name="rememberMe"
-                  >Remember me</vmd-switch
+                <material-switch id="rememberMe" name="rememberMe"
+                  >Remember me</material-switch
                 >
                 <div class="text-center">
-                  <vmd-button
+                  <material-button
                     class="my-4 mb-2"
                     variant="gradient"
                     color="success"
                     fullWidth
-                    >Sign in</vmd-button
+                    >Sign in</material-button
                   >
                 </div>
                 <p class="mt-4 text-sm text-center">
@@ -143,18 +143,18 @@
 
 <script>
 import Navbar from "@/examples/PageLayout/Navbar.vue";
-import VmdInput from "@/components/VmdInput.vue";
-import VmdSwitch from "@/components/VmdSwitch.vue";
-import VmdButton from "@/components/VmdButton.vue";
+import MaterialInput from "@/components/MaterialInput.vue";
+import MaterialSwitch from "@/components/MaterialSwitch.vue";
+import MaterialButton from "@/components/MaterialButton.vue";
 import { mapMutations } from "vuex";
 
 export default {
   name: "sign-in",
   components: {
     Navbar,
-    VmdInput,
-    VmdSwitch,
-    VmdButton,
+    MaterialInput,
+    MaterialSwitch,
+    MaterialButton,
   },
   beforeMount() {
     this.toggleEveryDisplay();

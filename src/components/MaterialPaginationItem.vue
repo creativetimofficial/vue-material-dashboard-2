@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "VmdPaginationItem",
+  name: "MaterialPaginationItem",
   props: {
     label: {
       type: String,
