@@ -104,19 +104,19 @@ vue-material-dashboard-2
     │   │   ├── js
     │   │   └── scss
     │   ├── components
-    │   │   ├── VmdAlert.vue
-    │   │   ├── VmdAvatar.vue
-    │   │   ├── VmdBadge.vue
-    │   │   ├── VmdButton.vue
-    │   │   ├── VmdCheckbox.vue
-    │   │   ├── VmdInput.vue
-    │   │   ├── VmdPagination.vue
-    │   │   ├── VmdPaginationItem.vue
-    │   │   ├── VmdProgress.vue
-    │   │   ├── VmdRadio.vue
-    │   │   ├── VmdSnackbar.vue
-    │   │   ├── VmdSwitch.vue
-    │   │   └── VmdTextarea.vue
+    │   │   ├── MaterialAlert.vue
+    │   │   ├── MaterialAvatar.vue
+    │   │   ├── MaterialBadge.vue
+    │   │   ├── MaterialButton.vue
+    │   │   ├── MaterialCheckbox.vue
+    │   │   ├── MaterialInput.vue
+    │   │   ├── MaterialPagination.vue
+    │   │   ├── MaterialPaginationItem.vue
+    │   │   ├── MaterialProgress.vue
+    │   │   ├── MaterialRadio.vue
+    │   │   ├── MaterialSnackbar.vue
+    │   │   ├── MaterialSwitch.vue
+    │   │   └── MaterialTextarea.vue
     │   ├── examples
     │   │   ├── Cards
     │   │   ├── Charts
