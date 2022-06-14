@@ -1,5 +1,9 @@
 # Change Log
 
+## [3.0.0] 2022-06-14
+
+- Rename components name prefix from Vmd to Material
+
 ## [2.0.0] 2022-04-20
 
 ### Bug fixing
