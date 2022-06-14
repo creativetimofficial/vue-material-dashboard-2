@@ -20,7 +20,7 @@
 import setMaterialInput from "@/assets/js/material-input.js";
 
 export default {
-  name: "VmdTextarea",
+  name: "MaterialTextarea",
   props: {
     variant: {
       type: String,

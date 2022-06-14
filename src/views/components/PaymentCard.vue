@@ -6,10 +6,10 @@
           <h6 class="mb-0">Payment Method</h6>
         </div>
         <div class="col-6 text-end">
-          <vmd-button color="dark" variant="gradient">
+          <material-button color="dark" variant="gradient">
             <i class="fas fa-plus me-2"></i>
             Add New Card
-          </vmd-button>
+          </material-button>
         </div>
       </div>
     </div>
@@ -69,14 +69,14 @@
 </template>
 
 <script>
-import VmdButton from "@/components/VmdButton.vue";
+import MaterialButton from "@/components/MaterialButton.vue";
 import img1 from "@/assets/img/logos/mastercard.png";
 import img2 from "@/assets/img/logos/visa.png";
 
 export default {
   name: "payment-card",
   components: {
-    VmdButton,
+    MaterialButton,
   },
   data() {
     return {

@@ -22,7 +22,7 @@
 import setMaterialInput from "@/assets/js/material-input.js";
 
 export default {
-  name: "VmdInput",
+  name: "MaterialInput",
   props: {
     variant: {
       type: String,

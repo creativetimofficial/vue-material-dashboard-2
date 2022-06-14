@@ -1,13 +1,14 @@
 <template>
-  <div class="form-check">
+  <div class="form-check form-switch d-flex">
     <input
       :id="id"
       class="form-check-input"
-      type="radio"
+      :class="$attrs.class"
+      type="checkbox"
       :name="name"
       :checked="checked"
     />
-    <label class="custom-control-label" :for="id">
+    <label class="form-check-label ms-3" :class="labelClass" :for="id">
       <slot />
     </label>
   </div>
@@ -15,7 +16,7 @@
 
 <script>
 export default {
-  name: "VmdRadio",
+  name: "MaterialSwitch",
   props: {
     name: {
       type: String,
@@ -28,6 +29,10 @@ export default {
     checked: {
       type: Boolean,
       default: false,
+    },
+    labelClass: {
+      type: String,
+      default: "",
     },
   },
 };

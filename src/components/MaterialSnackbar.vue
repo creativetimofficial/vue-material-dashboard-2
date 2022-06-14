@@ -21,7 +21,7 @@
 
 <script>
 export default {
-  name: "VmdSnackbar",
+  name: "MaterialSnackbar",
   props: {
     title: {
       type: String,

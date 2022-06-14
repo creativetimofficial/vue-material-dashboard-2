@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "VmdButton",
+  name: "MaterialButton",
   props: {
     color: {
       type: String,

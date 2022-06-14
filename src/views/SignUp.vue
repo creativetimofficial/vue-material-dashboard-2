@@ -42,7 +42,7 @@
                   <div class="card-body">
                     <form role="form">
                       <div class="mb-3">
-                        <vmd-input
+                        <material-input
                           id="name"
                           type="text"
                           label="Name"
@@ -51,7 +51,7 @@
                         />
                       </div>
                       <div class="mb-3">
-                        <vmd-input
+                        <material-input
                           id="email"
                           type="email"
                           label="Email"
@@ -60,7 +60,7 @@
                         />
                       </div>
                       <div class="mb-3">
-                        <vmd-input
+                        <material-input
                           id="password"
                           type="password"
                           label="Password"
@@ -68,7 +68,7 @@
                           size="lg"
                         />
                       </div>
-                      <vmd-checkbox
+                      <material-checkbox
                         id="flexCheckDefault"
                         class="font-weight-light"
                         checked
@@ -79,15 +79,15 @@
                           class="text-dark font-weight-bolder"
                           >Terms and Conditions</a
                         >
-                      </vmd-checkbox>
+                      </material-checkbox>
                       <div class="text-center">
-                        <vmd-button
+                        <material-button
                           class="mt-4"
                           variant="gradient"
                           color="success"
                           fullWidth
                           size="lg"
-                          >Sign Up</vmd-button
+                          >Sign Up</material-button
                         >
                       </div>
                     </form>
@@ -114,9 +114,9 @@
 
 <script>
 import Navbar from "@/examples/PageLayout/Navbar.vue";
-import VmdInput from "@/components/VmdInput.vue";
-import VmdCheckbox from "@/components/VmdCheckbox.vue";
-import VmdButton from "@/components/VmdButton.vue";
+import MaterialInput from "@/components/MaterialInput.vue";
+import MaterialCheckbox from "@/components/MaterialCheckbox.vue";
+import MaterialButton from "@/components/MaterialButton.vue";
 const body = document.getElementsByTagName("body")[0];
 import { mapMutations } from "vuex";
 
@@ -124,9 +124,9 @@ export default {
   name: "sign-up",
   components: {
     Navbar,
-    VmdInput,
-    VmdCheckbox,
-    VmdButton,
+    MaterialInput,
+    MaterialCheckbox,
+    MaterialButton,
   },
   beforeMount() {
     this.toggleEveryDisplay();
