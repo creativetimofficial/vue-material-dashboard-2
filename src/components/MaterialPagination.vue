@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: "vmd-pagination",
+  name: "MaterialPagination",
   props: {
     color: String,
     size: String,

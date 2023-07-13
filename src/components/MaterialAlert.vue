@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: "vmd-alert",
+  name: "MaterialAlert",
   props: {
     color: {
       type: String,

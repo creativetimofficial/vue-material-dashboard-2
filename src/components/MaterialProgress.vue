@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "vmd-progress",
+  name: "MaterialProgress",
   props: {
     color: {
       type: String,

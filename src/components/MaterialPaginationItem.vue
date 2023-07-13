@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "vmd-pagination-item",
+  name: "MaterialPaginationItem",
   props: {
     label: String,
     active: {

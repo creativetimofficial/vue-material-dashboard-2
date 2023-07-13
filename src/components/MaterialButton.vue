@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: "vmd-button",
+  name: "MaterialButton",
   props: {
     color: {
       type: String,
