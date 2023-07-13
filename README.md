@@ -117,6 +117,7 @@ vue-material-dashboard-2
     │   │   └── MaterialTextarea.vue
     │   ├── examples
     │   │   ├── Cards
+    │   │   ├── Charts
     │   │   ├── Navbars
     │   │   ├── PageLayout
     │   │   ├── Sidenav
@@ -133,7 +134,6 @@ vue-material-dashboard-2
     │   │   ├── Notification.vue
     │   │   ├── Profile.vue
     │   │   ├── Rtl.vue
-    │   │   ├── Sales.vue
     │   │   ├── SignIn.vue
     │   │   ├── SignUp.vue
     │   │   └── Tables.vue
@@ -143,6 +143,7 @@ vue-material-dashboard-2
     ├── .browserslistrc
     ├── .eslintrc.js
     ├── .gitignore
+    ├── .npmrc
     ├── babel.config.json
     ├── CHANGELOG.md
     ├── ISSUE_TEMPLATE.md
