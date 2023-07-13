@@ -6,8 +6,8 @@
           <h6 class="mb-0">Invoices</h6>
         </div>
         <div class="col-6 text-end">
-          <vmd-button color="primary" size="sm" variant="outline"
-            >View All</vmd-button
+          <material-button color="primary" size="sm" variant="outline"
+            >View All</material-button
           >
         </div>
       </div>
@@ -105,12 +105,12 @@
 </template>
 
 <script>
-import VmdButton from "@/components/VmdButton.vue";
+import MaterialButton from "@/components/MaterialButton.vue";
 
 export default {
   name: "invoice-card",
   components: {
-    VmdButton,
+    MaterialButton,
   },
 };
 </script>

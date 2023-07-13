@@ -7,22 +7,22 @@
     class="nav-link"
     :class="
       getRoute() === collapseRef
-        ? `active bg-gradient-${this.$store.state.mcolor}`
+        ? `active bg-gradient-${$store.state.mcolor}`
         : ''
     "
     v-bind="$attrs"
     type="button"
-    @click="this.isExpanded = !this.isExpanded"
+    @click="isExpanded = !isExpanded"
   >
     <div
       class="text-center d-flex align-items-center justify-content-center"
-      :class="this.$store.state.isRTL ? ' ms-2' : 'me-2'"
+      :class="$store.state.isRTL ? ' ms-2' : 'me-2'"
     >
       <slot name="icon"></slot>
     </div>
     <span
       class="nav-link-text"
-      :class="this.$store.state.isRTL ? ' me-1' : 'ms-1'"
+      :class="$store.state.isRTL ? ' me-1' : 'ms-1'"
       >{{ navText }}</span
     >
   </a>

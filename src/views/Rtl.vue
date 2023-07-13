@@ -4,70 +4,128 @@
       <div class="col-lg-12 position-relative z-index-2">
         <div class="row">
           <div class="col-lg-3 col-md-6 col-sm-6">
-            <mini-cards
-              title="أموال اليوم"
-              value="$53k"
-              percentage="+55%"
-              iconName="weekend"
-              detail="من الأسبوع الماضي"
-              iconClass="text-white"
-              iconBackground="bg-gradient-dark"
+            <mini-statistics-card
+              :title="{ text: 'أموال اليوم', value: 281 }"
+              detail="<span class='text-success text-sm font-weight-bolder'>+55%</span>من الأسبوع الماضي"
+              :icon="{
+                name: 'weekend',
+                color: 'text-white',
+                background: 'dark',
+              }"
+              isRtl
             />
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
-            <mini-cards
-              title="مستخدمو اليوم"
-              value="2,300"
-              percentage="+3%"
-              iconName="leaderboard"
-              detail="من الأسبوع الماضي"
-              iconClass="text-white"
-              iconBackground="bg-gradient-primary"
+            <mini-statistics-card
+              :title="{ text: 'مستخدمو اليوم', value: 2300 }"
+              detail="<span class='text-success text-sm font-weight-bolder'>+55%</span>من الأسبوع الماضي"
+              :icon="{
+                name: 'leaderboard',
+                color: 'text-white',
+                background: 'primary',
+              }"
+              isRtl
             />
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
-            <mini-cards
-              title="عملاء جدد"
-              value="34k"
-              percentage="+1%"
-              iconName="store"
-              detail="من الشهر الماضي"
-              iconClass="text-white"
-              iconBackground="bg-gradient-success"
+            <mini-statistics-card
+              :title="{ text: 'عملاء جدد', value: '34K' }"
+              detail="<span class='text-success text-sm font-weight-bolder'>+55%</span>من الأسبوع الماضي"
+              :icon="{
+                name: 'leaderboard',
+                color: 'text-white',
+                background: 'success',
+              }"
+              isRtl
             />
           </div>
           <div class="col-lg-3 col-md-6 col-sm-6 mt-lg-0 mt-4">
-            <mini-cards
-              title="مبيعات"
-              value="+91"
-              iconName="weekend"
-              detail="مقارنة بيوم أمس"
-              iconClass="text-white"
-              iconBackground="bg-gradient-info"
+            <mini-statistics-card
+              :title="{ text: 'مبيعات', value: '91+' }"
+              detail="<span class='text-success text-sm font-weight-bolder'>+55%</span>من الأسبوع الماضي"
+              :icon="{
+                name: 'person_add',
+                color: 'text-white',
+                background: 'info',
+              }"
+              isRtl
             />
           </div>
         </div>
         <div class="row mt-4">
           <div class="col-lg-4 col-md-6 mt-4">
-            <chart-bars
+            <chart-holder-card
               title="مشاهدات الموقع"
-              desc="آخر أداء للحملة"
-              date="الحملة أرسلت قبل يومين"
-            />
+              subtitle="آخر أداء للحملة"
+              update="الحملة أرسلت قبل يومين"
+            >
+              <reports-bar-chart
+                :chart="{
+                  labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+                  datasets: {
+                    label: 'Sales',
+                    data: [50, 20, 10, 22, 50, 10, 40],
+                  },
+                }"
+              />
+            </chart-holder-card>
           </div>
           <div class="col-lg-4 col-md-6 mt-4">
-            <chart-line
+            <chart-holder-card
               title="المبيعات اليومية"
-              desc="(+15%) زيادة في مبيعات اليوم."
-              date="تم التحديث منذ 4 دقائق "
-            />
+              subtitle="(<span class='font-weight-bolder'>+15%</span>) زيادة في مبيعات اليوم."
+              update="تم التحديث منذ 4 دقائق"
+              color="success"
+            >
+              <reports-line-chart
+                :chart="{
+                  labels: [
+                    'Apr',
+                    'May',
+                    'Jun',
+                    'Jul',
+                    'Aug',
+                    'Sep',
+                    'Oct',
+                    'Nov',
+                    'Dec',
+                  ],
+                  datasets: {
+                    label: 'Mobile apps',
+                    data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+                  },
+                }"
+              />
+            </chart-holder-card>
           </div>
           <div class="col-lg-4 mt-4">
-            <chart-line-tasks
-              title="المهام المكتملة"
-              desc="آخر أداء للحملة"
-              date="تم تحديثه للتو"
-            />
+            <chart-holder-card
+              title="المبيعات اليومية"
+              subtitle="(<span class='font-weight-bolder'>+15%</span>) زيادة في مبيعات اليوم."
+              update="تم التحديث منذ 4 دقائق"
+              color="dark"
+            >
+              <reports-line-chart
+                id="reports-line-chart-2"
+                :chart="{
+                  labels: [
+                    'Apr',
+                    'May',
+                    'Jun',
+                    'Jul',
+                    'Aug',
+                    'Sep',
+                    'Oct',
+                    'Nov',
+                    'Dec',
+                  ],
+                  datasets: {
+                    label: 'Mobile apps',
+                    data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+                  },
+                }"
+              />
+            </chart-holder-card>
           </div>
         </div>
       </div>
@@ -75,60 +133,179 @@
 
     <div class="row">
       <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
-        <projects-card
-          Action="عمل"
-          AnotherAction="عمل اخر"
-          SomethingElse="شی اخر هنا"
-          th1="المشروع"
-          th2="أعضاء"
-          th3="ميزانية"
-          th4="إكمال"
+        <project-card
           title="المشاريع"
-          desc="هذا الشهر"
-          descBold="انتهى30 "
-          data1="الإصدار"
-          data2="أضف مسار التقدم إلى التطبيق الداخلي"
-          data3="إصلاح أخطاء النظام الأساسي"
-          data5="أضف صفحة التسعير الجديدة"
-          data6="إعادة تصميم متجر جديد على الإنترنت"
-          data4="إطلاق تطبيق الهاتف المحمول الخاص بنا"
-          empty="غير مضبوط"
+          description='<i class="fa fa-check text-info" aria-hidden="true"></i>
+            <span class="font-weight-bold ms-1">انتهى30</span>
+            هذا الشهر'
+          :headings="['المشروع', 'أعضاء', 'ميزانية', 'إكمال']"
+          :rows="[
+            {
+              logo: logoXD,
+              tool: 'Material XD الإصدار',
+              teamMembers: [team1, team2, team3, team4],
+              price: '$14,000',
+              progress: 60,
+            },
+            {
+              logo: logoAtlassian,
+              tool: 'أضف مسار التقدم إلى التطبيق الداخلي',
+              teamMembers: [team1, team2],
+              price: '$3,000',
+              progress: 10,
+            },
+            {
+              logo: logoSlack,
+              tool: 'إصلاح أخطاء النظام الأساسي',
+              teamMembers: [team2, team4],
+              price: 'غير مضبوط',
+              progress: 100,
+            },
+            {
+              logo: logoSpotify,
+              tool: 'إطلاق تطبيق الهاتف المحمول الخاص بنا',
+              teamMembers: [team1, team2, team3, team4],
+              price: '$20,500',
+              progress: 60,
+            },
+            {
+              logo: logoJira,
+              tool: 'أضف صفحة التسعير الجديدة',
+              teamMembers: [team1],
+              price: '$500',
+              progress: 25,
+            },
+            {
+              logo: logoInvision,
+              tool: 'إعادة تصميم متجر جديد على الإنترنت',
+              teamMembers: [team1, team4],
+              price: '$2,000',
+              progress: 40,
+            },
+          ]"
+          :action="[
+            {
+              route: 'javascript:;',
+              label: 'عمل',
+            },
+            {
+              route: 'javascript:;',
+              label: 'عمل اخر',
+            },
+            {
+              route: 'javascript:;',
+              label: 'شی اخر هنا',
+            },
+          ]"
+          isRtl
         />
       </div>
       <div class="col-lg-4 col-md-6">
-        <orders-card
+        <timeline-list
+          class="h-100"
           title="نظرة عامة على الطلبات"
-          text="هذا الشهر"
-          order="$2400, تغييرات في التصميم"
-          newOrder="طلب جديد #1832412"
-          payment="مدفوعات الخادم لشهر أبريل"
-          newCard="تمت إضافة بطاقة جديدة للطلب #4395133"
-          unlockPackages="فتح الحزم من أجل التطوير"
-          newOrder2="طلب جديد #9583120"
-        />
+          description="<i class='fa fa-arrow-up text-success' aria-hidden='true'></i>
+        <span class='font-weight-bold'>24%</span>هذا الشهر"
+        >
+          <timeline-item
+            :icon="{
+              component: 'notifications',
+              class: 'text-success',
+            }"
+            title="$2400, تغييرات في التصميم"
+            date-time="22 ديسمبر 7:20 مساءً"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'code',
+              class: 'text-danger',
+            }"
+            title="طلب جديد # 1832412"
+            date-time="21 ديسمبر 11 م"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'shopping_cart',
+              class: 'text-info',
+            }"
+            title="مدفوعات الخادم لشهر أبريل"
+            date-time="21 ديسمبر 9:34 مساءً"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'credit_card',
+              class: 'text-warning',
+            }"
+            title="تمت إضافة بطاقة جديدة للأمر رقم 4395133"
+            date-time="20 ديسمبر 2:20 صباحًا"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'vpn_key',
+              class: 'text-primary',
+            }"
+            title="فتح الحزم من أجل التطوير"
+            date-time="18 ديسمبر ، 4:54 صباحًا"
+          />
+          <TimelineItem
+            :icon="{
+              component: 'bug_report',
+              class: 'text-dark',
+            }"
+            title="طلب جديد # 9583120"
+            date-time="17 ديسمبر"
+          />
+        </timeline-list>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import ChartBars from "./components/ChartBars.vue";
-import ChartLine from "./components/ChartLine.vue";
-import ChartLineTasks from "./components/ChartLineTasks.vue";
-import MiniCards from "./components/MiniCards.vue";
-import ProjectsCard from "./components/ProjectsCard.vue";
-import OrdersCard from "./components/OrdersCard.vue";
+import ChartHolderCard from "./components/ChartHolderCard.vue";
+import ReportsBarChart from "@/examples/Charts/ReportsBarChart.vue";
+import ReportsLineChart from "@/examples/Charts/ReportsLineChart.vue";
+import MiniStatisticsCard from "@/examples/Cards/MiniStatisticsCard.vue";
+import ProjectCard from "./components/ProjectCard.vue";
+import TimelineList from "@/examples/Cards/TimelineList.vue";
+import TimelineItem from "@/examples/Cards/TimelineItem.vue";
+
+import logoXD from "@/assets/img/small-logos/logo-xd.svg";
+import logoAtlassian from "@/assets/img/small-logos/logo-atlassian.svg";
+import logoSlack from "@/assets/img/small-logos/logo-slack.svg";
+import logoSpotify from "@/assets/img/small-logos/logo-spotify.svg";
+import logoJira from "@/assets/img/small-logos/logo-jira.svg";
+import logoInvision from "@/assets/img/small-logos/logo-invision.svg";
+
+import team1 from "@/assets/img/team-1.jpg";
+import team2 from "@/assets/img/team-2.jpg";
+import team3 from "@/assets/img/team-3.jpg";
+import team4 from "@/assets/img/team-4.jpg";
 
 export default {
   name: "rtl-page",
-
+  data() {
+    return {
+      logoXD,
+      logoAtlassian,
+      logoSlack,
+      logoSpotify,
+      logoJira,
+      logoInvision,
+      team1,
+      team2,
+      team3,
+      team4,
+    };
+  },
   components: {
-    ChartBars,
-    ChartLine,
-    ChartLineTasks,
-    MiniCards,
-    ProjectsCard,
-    OrdersCard,
+    ChartHolderCard,
+    ReportsBarChart,
+    ReportsLineChart,
+    MiniStatisticsCard,
+    ProjectCard,
+    TimelineList,
+    TimelineItem,
   },
 
   beforeMount() {

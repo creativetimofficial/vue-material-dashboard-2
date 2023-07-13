@@ -1,64 +1,55 @@
 <template>
-  <div class="card z-index-2">
-    <div
-      class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent"
-    >
-      <div
-        class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1"
-      >
-        <div class="chart">
-          <canvas id="chart-bars" class="chart-canvas" height="170"></canvas>
-        </div>
-      </div>
-    </div>
-    <div class="card-body">
-      <h6 class="mb-0">{{ title }}</h6>
-      <p class="text-sm">{{ desc }}</p>
-      <hr class="dark horizontal" />
-      <div class="d-flex">
-        <i class="material-icons text-sm my-auto me-1">schedule</i>
-        <p class="mb-0 text-sm">{{ date }}</p>
-      </div>
-    </div>
+  <div class="chart">
+    <canvas :id="id" class="chart-canvas" :height="height"></canvas>
   </div>
 </template>
-
 <script>
 import Chart from "chart.js/auto";
 
 export default {
-  name: "chart-bars",
+  name: "ReportsBarChart",
   props: {
-    title: {
+    id: {
       type: String,
-      default: "Website Views",
+      default: "bar-chart",
     },
-    desc: {
-      type: String,
-      default: "Last Campaign Performance",
+    height: {
+      type: [Number, String],
+      default: "170",
     },
-    date: {
-      type: String,
-      default: "campaign sent 2 days ago",
+    chart: {
+      type: Object,
+      required: true,
+      labels: Array,
+      datasets: {
+        type: Object,
+        label: String,
+        data: Array,
+      },
     },
   },
 
   mounted() {
-    var ctx = document.getElementById("chart-bars").getContext("2d");
+    var ctx = document.getElementById(this.id).getContext("2d");
+
+    let chartStatus = Chart.getChart(this.id);
+    if (chartStatus != undefined) {
+      chartStatus.destroy();
+    }
 
     new Chart(ctx, {
       type: "bar",
       data: {
-        labels: ["M", "T", "W", "T", "F", "S", "S"],
+        labels: this.chart.labels,
         datasets: [
           {
-            label: "Sales",
+            label: this.chart.datasets.label,
             tension: 0.4,
             borderWidth: 0,
             borderRadius: 4,
             borderSkipped: false,
             backgroundColor: "rgba(255, 255, 255, .8)",
-            data: [50, 20, 10, 22, 50, 10, 40],
+            data: this.chart.datasets.data,
             maxBarThickness: 6,
           },
         ],

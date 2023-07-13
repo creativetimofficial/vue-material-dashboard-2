@@ -28,7 +28,7 @@
         <a href="#" class="switch-trigger background-color">
           <div
             class="my-2 badge-colors"
-            :class="this.$store.state.isRTL ? 'text-end' : ' text-start'"
+            :class="$store.state.isRTL ? 'text-end' : ' text-start'"
           >
             <span
               class="badge filter bg-gradient-primary"
@@ -72,9 +72,7 @@
             id="btn-dark"
             class="px-3 mb-2 btn bg-gradient-dark"
             :class="
-              this.$store.state.sidebarType === 'bg-gradient-dark'
-                ? 'active'
-                : ''
+              $store.state.sidebarType === 'bg-gradient-dark' ? 'active' : ''
             "
             @click="sidebarType('bg-gradient-dark')"
           >
@@ -84,7 +82,7 @@
             id="btn-transparent"
             class="px-3 mb-2 btn bg-gradient-dark ms-2"
             :class="
-              this.$store.state.sidebarType === 'bg-transparent' ? 'active' : ''
+              $store.state.sidebarType === 'bg-transparent' ? 'active' : ''
             "
             @click="sidebarType('bg-transparent')"
           >
@@ -93,9 +91,7 @@
           <button
             id="btn-white"
             class="px-3 mb-2 btn bg-gradient-dark ms-2"
-            :class="
-              this.$store.state.sidebarType === 'bg-white' ? 'active' : ''
-            "
+            :class="$store.state.sidebarType === 'bg-white' ? 'active' : ''"
             @click="sidebarType('bg-white')"
           >
             White
@@ -113,7 +109,7 @@
             <input
               class="form-check-input mt-1 ms-auto"
               type="checkbox"
-              :checked="this.$store.state.isDarkMode"
+              :checked="$store.state.isDarkMode"
               @click="darkMode"
             />
           </div>

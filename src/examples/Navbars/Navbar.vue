@@ -4,20 +4,20 @@
     v-bind="$attrs"
     id="navbarBlur"
     data-scroll="true"
-    :class="this.$store.state.isAbsolute ? 'mt-4' : 'mt-0'"
+    :class="$store.state.isAbsolute ? 'mt-4' : 'mt-0'"
   >
     <div class="px-3 py-1 container-fluid">
       <breadcrumbs :currentPage="currentRouteName" :textWhite="textWhite" />
       <div
         class="mt-2 collapse navbar-collapse mt-sm-0 me-md-0 me-sm-4"
-        :class="this.$store.state.isRTL ? 'px-0' : 'me-sm-4'"
+        :class="$store.state.isRTL ? 'px-0' : 'me-sm-4'"
         id="navbar"
       >
         <div
           class="pe-md-3 d-flex align-items-center"
-          :class="this.$store.state.isRTL ? 'me-md-auto' : 'ms-md-auto'"
+          :class="$store.state.isRTL ? 'me-md-auto' : 'ms-md-auto'"
         >
-          <vmd-input label="Search here" />
+          <material-input label="Search here" />
         </div>
         <ul class="navbar-nav justify-content-end">
           <li class="nav-item d-flex align-items-center">
@@ -28,7 +28,7 @@
             >
               <i
                 class="material-icons"
-                :class="this.$store.state.isRTL ? 'ms-sm-2' : 'me-sm-1'"
+                :class="$store.state.isRTL ? 'ms-sm-2' : 'me-sm-1'"
               >
                 account_circle
               </i>
@@ -61,7 +61,7 @@
           </li>
           <li
             class="nav-item dropdown d-flex align-items-center"
-            :class="this.$store.state.isRTL ? 'ps-2' : 'pe-2'"
+            :class="$store.state.isRTL ? 'ps-2' : 'pe-2'"
           >
             <a
               href="#"
@@ -191,7 +191,7 @@
   </nav>
 </template>
 <script>
-import VmdInput from "@/components/VmdInput.vue";
+import MaterialInput from "@/components/MaterialInput.vue";
 import Breadcrumbs from "../Breadcrumbs.vue";
 import { mapMutations } from "vuex";
 
@@ -215,7 +215,7 @@ export default {
   },
   components: {
     Breadcrumbs,
-    VmdInput,
+    MaterialInput,
   },
   computed: {
     currentRouteName() {

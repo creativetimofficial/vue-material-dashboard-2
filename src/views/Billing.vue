@@ -15,20 +15,18 @@
             <div class="row">
               <div class="col-md-6">
                 <default-info-card
-                  :classIcon="salary.classIcon"
-                  :title="salary.title"
-                  :desc="salary.desc"
-                  :price="salary.price"
-                  :iconName="salary.iconName"
+                  icon="account_balance"
+                  title="Salary"
+                  description="Belong Interactive"
+                  value="+$2000"
                 />
               </div>
               <div class="col-md-6">
                 <default-info-card
-                  :classIcon="paypal.classIcon"
-                  :title="paypal.title"
-                  :desc="paypal.desc"
-                  :price="paypal.price"
-                  :iconName="paypal.iconName"
+                  icon="account_balance_wallet"
+                  title="Paypal"
+                  description="Freelance Payment"
+                  value="$455.00"
                 />
               </div>
             </div>

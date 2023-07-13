@@ -1,60 +1,48 @@
 <template>
-  <div class="card z-index-2">
-    <div
-      class="card-header p-0 position-relative mt-n4 mx-3 z-index-2 bg-transparent"
-    >
-      <div
-        class="bg-gradient-success shadow-success border-radius-lg py-3 pe-1"
-      >
-        <div class="chart">
-          <canvas id="chart-line" class="chart-canvas" height="170"></canvas>
-        </div>
-      </div>
-    </div>
-    <div class="card-body">
-      <h6 class="mb-0">{{ title }}</h6>
-      <p class="text-sm">
-        (
-        <span class="font-weight-bolder">+15%</span>) {{ title }}
-      </p>
-      <hr class="dark horizontal" />
-      <div class="d-flex">
-        <i class="material-icons text-sm my-auto me-1">schedule</i>
-        <p class="mb-0 text-sm">{{ date }}</p>
-      </div>
-    </div>
+  <div class="chart">
+    <canvas :id="id" class="chart-canvas" :height="height"></canvas>
   </div>
 </template>
-
 <script>
 import Chart from "chart.js/auto";
 
 export default {
-  name: "chart-line",
+  name: "ReportsLineChart",
   props: {
-    title: {
+    id: {
       type: String,
-      default: "Website Views",
+      default: "line-chart",
     },
-    desc: {
-      type: String,
-      default: "Last Campaign Performance",
+    height: {
+      type: [Number, String],
+      default: "170",
     },
-    date: {
-      type: String,
-      default: "campaign sent 2 days ago",
+    chart: {
+      type: Object,
+      required: true,
+      labels: Array,
+      datasets: {
+        type: Object,
+        label: String,
+        data: Array,
+      },
     },
   },
   mounted() {
-    var ctx2 = document.getElementById("chart-line").getContext("2d");
+    var ctx = document.getElementById(this.id).getContext("2d");
 
-    new Chart(ctx2, {
+    let chartStatus = Chart.getChart(this.id);
+    if (chartStatus != undefined) {
+      chartStatus.destroy();
+    }
+
+    new Chart(ctx, {
       type: "line",
       data: {
-        labels: ["Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+        labels: this.chart.labels,
         datasets: [
           {
-            label: "Mobile apps",
+            label: this.chart.datasets.label,
             tension: 0,
             borderWidth: 0,
             pointRadius: 5,
@@ -67,7 +55,7 @@ export default {
             borderWidth: 4,
             backgroundColor: "transparent",
             fill: true,
-            data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+            data: this.chart.datasets.data,
             maxBarThickness: 6,
           },
         ],

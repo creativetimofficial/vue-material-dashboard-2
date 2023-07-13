@@ -1,8 +1,8 @@
 <template>
   <sidenav
-    :custom_class="this.$store.state.mcolor"
-    :class="[this.$store.state.isRTL ? 'fixed-end' : 'fixed-start']"
-    v-if="this.$store.state.showSidenav"
+    :custom_class="$store.state.mcolor"
+    :class="[$store.state.isRTL ? 'fixed-end' : 'fixed-start']"
+    v-if="$store.state.showSidenav"
   />
   <main
     class="main-content position-relative max-height-vh-100 h-100 overflow-x-hidden"
@@ -10,17 +10,17 @@
     <!-- nav -->
     <navbar
       :class="[navClasses]"
-      :textWhite="this.$store.state.isAbsolute ? 'text-white opacity-8' : ''"
+      :textWhite="$store.state.isAbsolute ? 'text-white opacity-8' : ''"
       :minNav="navbarMinimize"
-      v-if="this.$store.state.showNavbar"
+      v-if="$store.state.showNavbar"
     />
     <router-view />
-    <app-footer v-show="this.$store.state.showFooter" />
+    <app-footer v-show="$store.state.showFooter" />
     <configurator
       :toggle="toggleConfigurator"
       :class="[
-        this.$store.state.showConfig ? 'show' : '',
-        this.$store.state.hideConfigButton ? 'd-none' : '',
+        $store.state.showConfig ? 'show' : '',
+        $store.state.hideConfigButton ? 'd-none' : '',
       ]"
     />
   </main>
@@ -46,10 +46,10 @@ export default {
   computed: {
     navClasses() {
       return {
-        "position-sticky blur shadow-blur mt-4 left-auto top-1 z-index-sticky": this
-          .$store.state.isNavFixed,
-        "position-absolute px-4 mx-0 w-100 z-index-2": this.$store.state
-          .isAbsolute,
+        "position-sticky blur shadow-blur mt-4 left-auto top-1 z-index-sticky":
+          this.$store.state.isNavFixed,
+        "position-absolute px-4 mx-0 w-100 z-index-2":
+          this.$store.state.isAbsolute,
         "px-0 mx-4 mt-4": !this.$store.state.isAbsolute,
       };
     },

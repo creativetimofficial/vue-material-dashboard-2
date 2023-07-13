@@ -3,10 +3,8 @@
     id="sidenav-main"
     class="sidenav navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 ms-3"
     :class="`${
-      this.$store.state.isRTL
-        ? 'me-3 rotate-caret fixed-end'
-        : 'fixed-start ms-3'
-    } ${this.$store.state.sidebarType}`"
+      $store.state.isRTL ? 'me-3 rotate-caret fixed-end' : 'fixed-start ms-3'
+    } ${$store.state.sidebarType}`"
   >
     <div class="sidenav-header">
       <i
@@ -17,9 +15,9 @@
       <a class="m-0 navbar-brand" href="/">
         <img
           :src="
-            this.$store.state.sidebarType === 'bg-white' ||
-            (this.$store.state.sidebarType === 'bg-transparent' &&
-              !this.$store.state.isDarkMode)
+            $store.state.sidebarType === 'bg-white' ||
+            ($store.state.sidebarType === 'bg-transparent' &&
+              !$store.state.isDarkMode)
               ? logoDark
               : logo
           "

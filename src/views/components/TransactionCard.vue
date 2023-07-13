@@ -20,14 +20,14 @@
           class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg"
         >
           <div class="d-flex align-items-center">
-            <vmd-button
+            <material-button
               color="danger"
               variant="outline"
               size="sm"
               class="btn-icon-only btn-rounded mb-0 me-3 d-flex align-items-center justify-content-center"
             >
               <i class="fas fa-arrow-down" aria-hidden="true"></i>
-            </vmd-button>
+            </material-button>
             <div class="d-flex flex-column">
               <h6 class="mb-1 text-dark text-sm">Netflix</h6>
               <span class="text-xs">27 March 2020, at 12:30 PM</span>
@@ -43,14 +43,14 @@
           class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg"
         >
           <div class="d-flex align-items-center">
-            <vmd-button
+            <material-button
               color="success"
               variant="outline"
               size="sm"
               class="btn-icon-only btn-rounded mb-0 me-3 d-flex align-items-center justify-content-center"
             >
               <i class="fas fa-arrow-up" aria-hidden="true"></i>
-            </vmd-button>
+            </material-button>
             <div class="d-flex flex-column">
               <h6 class="mb-1 text-dark text-sm">Apple</h6>
               <span class="text-xs">27 March 2020, at 04:30 AM</span>
@@ -71,14 +71,14 @@
           class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg"
         >
           <div class="d-flex align-items-center">
-            <vmd-button
+            <material-button
               color="success"
               variant="outline"
               size="sm"
               class="btn-icon-only btn-rounded mb-0 me-3 d-flex align-items-center justify-content-center"
             >
               <i class="fas fa-arrow-up" aria-hidden="true"></i>
-            </vmd-button>
+            </material-button>
             <div class="d-flex flex-column">
               <h6 class="mb-1 text-dark text-sm">Stripe</h6>
               <span class="text-xs">26 March 2020, at 13:45 PM</span>
@@ -94,14 +94,14 @@
           class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg"
         >
           <div class="d-flex align-items-center">
-            <vmd-button
+            <material-button
               color="success"
               variant="outline"
               size="sm"
               class="btn-icon-only btn-rounded mb-0 me-3 d-flex align-items-center justify-content-center"
             >
               <i class="fas fa-arrow-up" aria-hidden="true"></i>
-            </vmd-button>
+            </material-button>
             <div class="d-flex flex-column">
               <h6 class="mb-1 text-dark text-sm">HubSpot</h6>
               <span class="text-xs">26 March 2020, at 12:30 PM</span>
@@ -117,14 +117,14 @@
           class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg"
         >
           <div class="d-flex align-items-center">
-            <vmd-button
+            <material-button
               color="success"
               variant="outline"
               size="sm"
               class="btn-icon-only btn-rounded mb-0 me-3 d-flex align-items-center justify-content-center"
             >
               <i class="fas fa-arrow-up" aria-hidden="true"></i>
-            </vmd-button>
+            </material-button>
             <div class="d-flex flex-column">
               <h6 class="mb-1 text-dark text-sm">Creative Tim</h6>
               <span class="text-xs">26 March 2020, at 08:30 AM</span>
@@ -140,14 +140,14 @@
           class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg"
         >
           <div class="d-flex align-items-center">
-            <vmd-button
+            <material-button
               color="dark"
               variant="outline"
               size="sm"
               class="btn-icon-only btn-rounded mb-0 me-3 d-flex align-items-center justify-content-center"
             >
               <i class="fas fa-exclamation" aria-hidden="true"></i>
-            </vmd-button>
+            </material-button>
             <div class="d-flex flex-column">
               <h6 class="mb-1 text-dark text-sm">Webflow</h6>
               <span class="text-xs">26 March 2020, at 05:00 AM</span>
@@ -165,12 +165,12 @@
 </template>
 
 <script>
-import VmdButton from "@/components/VmdButton.vue";
+import MaterialButton from "@/components/MaterialButton.vue";
 
 export default {
   name: "transaction-card",
   components: {
-    VmdButton,
+    MaterialButton,
   },
 };
 </script>

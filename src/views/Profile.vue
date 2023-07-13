@@ -3,7 +3,7 @@
     <div
       class="page-header min-height-300 border-radius-xl mt-4"
       style="
-        background-image: url('https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+        background-image: url(&quot;https://images.unsplash.com/photo-1531512073830-ba890ca4eba2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80&quot;);
       "
     >
       <span class="mask bg-gradient-success opacity-6"></span>
@@ -203,33 +203,33 @@
                 </h6>
                 <ul class="list-group">
                   <li class="px-0 border-0 list-group-item">
-                    <vmd-switch
+                    <Material-switch
                       class="ps-0"
                       id="flexSwitchCheckDefault"
                       labelClass="mb-0 text-body text-truncate w-80"
                       inputClass="ms-0"
                       checked
-                      >Email me when someone follows me</vmd-switch
+                      >Email me when someone follows me</Material-switch
                     >
                   </li>
                   <li class="px-0 border-0 list-group-item">
-                    <vmd-switch
+                    <Material-switch
                       class="ps-0"
                       id="flexSwitchCheckDefault1"
                       labelClass="mb-0 text-body text-truncate w-80"
                       inputClass="ms-0"
-                      >Email me when someone answers on my post</vmd-switch
+                      >Email me when someone answers on my post</Material-switch
                     >
                   </li>
 
                   <li class="px-0 border-0 list-group-item">
-                    <vmd-switch
+                    <Material-switch
                       class="ps-0"
                       id="flexSwitchCheckDefault2"
                       labelClass="mb-0 text-body text-truncate w-80"
                       inputClass="ms-0"
                       checked
-                      >Email me when someone mentions me</vmd-switch
+                      >Email me when someone mentions me</Material-switch
                     >
                   </li>
                 </ul>
@@ -240,31 +240,31 @@
                 </h6>
                 <ul class="list-group">
                   <li class="px-0 border-0 list-group-item">
-                    <vmd-switch
+                    <Material-switch
                       class="ps-0"
                       id="flexSwitchCheckDefault3"
                       labelClass="mb-0 text-body text-truncate w-80"
                       inputClass="ms-0"
-                      >New launches and projects</vmd-switch
+                      >New launches and projects</Material-switch
                     >
                   </li>
                   <li class="px-0 border-0 list-group-item">
-                    <vmd-switch
+                    <Material-switch
                       class="ps-0"
                       id="flexSwitchCheckDefault4"
                       labelClass="mb-0 text-body text-truncate w-80"
                       inputClass="ms-0"
                       checked
-                      >Monthly product updates</vmd-switch
+                      >Monthly product updates</Material-switch
                     >
                   </li>
                   <li class="px-0 pb-0 border-0 list-group-item">
-                    <vmd-switch
+                    <Material-switch
                       class="ps-0"
                       id="flexSwitchCheckDefault5"
                       labelClass="mb-0 text-body text-truncate w-80"
                       inputClass="ms-0"
-                      >Subscribe to newsletter</vmd-switch
+                      >Subscribe to newsletter</Material-switch
                     >
                   </li>
                 </ul>
@@ -351,7 +351,7 @@
                   <li
                     class="px-0 mb-2 border-0 list-group-item d-flex align-items-center"
                   >
-                    <vmd-avatar
+                    <Material-avatar
                       class="me-3"
                       :img="sophie"
                       alt="kal"
@@ -373,7 +373,7 @@
                   <li
                     class="px-0 mb-2 border-0 list-group-item d-flex align-items-center"
                   >
-                    <vmd-avatar
+                    <Material-avatar
                       class="me-3"
                       :img="marie"
                       alt="kal"
@@ -395,7 +395,7 @@
                   <li
                     class="px-0 mb-2 border-0 list-group-item d-flex align-items-center"
                   >
-                    <vmd-avatar
+                    <Material-avatar
                       class="me-3"
                       :img="ivana"
                       alt="kal"
@@ -417,7 +417,7 @@
                   <li
                     class="px-0 mb-2 border-0 list-group-item d-flex align-items-center"
                   >
-                    <vmd-avatar
+                    <Material-avatar
                       class="me-3"
                       :img="peterson"
                       alt="kal"
@@ -439,7 +439,7 @@
                   <li
                     class="px-0 border-0 list-group-item d-flex align-items-center"
                   >
-                    <vmd-avatar
+                    <Material-avatar
                       class="me-3"
                       :img="nick"
                       alt="kal"
@@ -811,8 +811,8 @@
 </template>
 
 <script>
-import VmdSwitch from "@/components/VmdSwitch.vue";
-import VmdAvatar from "@/components/VmdAvatar.vue";
+import MaterialSwitch from "@/components/MaterialSwitch.vue";
+import MaterialAvatar from "@/components/MaterialAvatar.vue";
 import sophie from "@/assets/img/kal-visuals-square.jpg";
 import marie from "@/assets/img/marie.jpg";
 import ivana from "@/assets/img/ivana-square.jpg";
@@ -849,8 +849,8 @@ export default {
     };
   },
   components: {
-    VmdSwitch,
-    VmdAvatar,
+    MaterialSwitch,
+    MaterialAvatar,
   },
 
   mounted() {

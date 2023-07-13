@@ -1,6 +1,6 @@
 # [Vue Material Dashboard 2](http://demos.creative-tim.com/vue-material-dashboard-2/#/?ref=readme-vmd2) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://www.creative-tim.com/product/vue-material-dashboard-2&text=Check%20Vue%20Material%20Dashboard%202%20made%20by%20@CreativeTim%20#webdesign%20#dashboard%20#materialdesign%20#vue%20https://www.creative-tim.com/product/vue-material-dashboard)
 
-![version](https://img.shields.io/badge/version-1.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/vue-material-dashboard-2.svg)](https://github.com/creativetimofficial/vue-material-dashboard-2/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/vue-material-dashboard-2.svg)](https://github.com/creativetimofficial/vue-material-dashboard-2/issues?q=is%3Aissue+is%3Aclosed)
+![version](https://img.shields.io/badge/version-2.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/vue-material-dashboard-2.svg)](https://github.com/creativetimofficial/vue-material-dashboard-2/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/vue-material-dashboard-2.svg)](https://github.com/creativetimofficial/vue-material-dashboard-2/issues?q=is%3Aissue+is%3Aclosed)
 
 ![Image](https://s3.amazonaws.com/creativetim_bucket/products/596/original/vue-material-dashboard-2.jpg)
 
@@ -104,18 +104,17 @@ vue-material-dashboard-2
     │   │   ├── js
     │   │   └── scss
     │   ├── components
-    │   │   ├── VmdAlert.vue
-    │   │   ├── VmdAvatar.vue
-    │   │   ├── VmdBadge.vue
-    │   │   ├── VmdButton.vue
-    │   │   ├── VmdCheckbox.vue
-    │   │   ├── VmdInput.vue
-    │   │   ├── VmdPagination.vue
-    │   │   ├── VmdProgress.vue
-    │   │   ├── VmdRadio.vue
-    │   │   ├── VmdSnackbar.vue
-    │   │   ├── VmdSwitch.vue
-    │   │   └── VmdTextarea.vue
+    │   │   ├── MaterialAlert.vue
+    │   │   ├── MaterialAvatar.vue
+    │   │   ├── MaterialBadge.vue
+    │   │   ├── MaterialButton.vue
+    │   │   ├── MaterialCheckbox.vue
+    │   │   ├── MaterialInput.vue
+    │   │   ├── MaterialPagination.vue
+    │   │   ├── MaterialProgress.vue
+    │   │   ├── MaterialRadio.vue
+    │   │   ├── MaterialSwitch.vue
+    │   │   └── MaterialTextarea.vue
     │   ├── examples
     │   │   ├── Cards
     │   │   ├── Navbars

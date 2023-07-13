@@ -3,7 +3,7 @@
   <div
     class="page-header align-items-start min-vh-100"
     style="
-      background-image: url('https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80');
+      background-image: url(&quot;https://images.unsplash.com/photo-1497294815431-9365093b7331?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1950&q=80&quot;);
     "
   >
     <span class="mask bg-gradient-dark opacity-6"></span>
@@ -40,19 +40,23 @@
             <div class="card-body">
               <form role="form" class="text-start mt-3">
                 <div class="mb-3">
-                  <vmd-input type="email" label="Email" name="email" />
+                  <Material-input type="email" label="Email" name="email" />
                 </div>
                 <div class="mb-3">
-                  <vmd-input type="password" label="Password" name="password" />
+                  <Material-input
+                    type="password"
+                    label="Password"
+                    name="password"
+                  />
                 </div>
-                <vmd-switch id="rememberMe">Remember me</vmd-switch>
+                <material-switch id="rememberMe">Remember me</material-switch>
                 <div class="text-center">
-                  <vmd-button
+                  <material-button
                     class="my-4 mb-2"
                     variant="gradient"
                     color="success"
                     fullWidth
-                    >Sign in</vmd-button
+                    >Sign in</material-button
                   >
                 </div>
                 <p class="mt-4 text-sm text-center">
@@ -131,17 +135,17 @@
 
 <script>
 import Navbar from "@/examples/PageLayout/Navbar.vue";
-import VmdInput from "@/components/VmdInput.vue";
-import VmdSwitch from "@/components/VmdSwitch.vue";
-import VmdButton from "@/components/VmdButton.vue";
+import MaterialInput from "@/components/MaterialInput.vue";
+import MaterialSwitch from "@/components/MaterialSwitch.vue";
+import MaterialButton from "@/components/MaterialButton.vue";
 
 export default {
   name: "sign-in",
   components: {
     Navbar,
-    VmdInput,
-    VmdSwitch,
-    VmdButton,
+    MaterialInput,
+    MaterialSwitch,
+    MaterialButton,
   },
   beforeMount() {
     this.$store.state.hideConfigButton = true;

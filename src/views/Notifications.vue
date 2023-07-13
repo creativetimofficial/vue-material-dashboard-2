@@ -7,70 +7,90 @@
             <h5 class="mb-0">Alerts</h5>
           </div>
           <div class="card-body p-3 pb-0">
-            <vmd-alert class="font-weight-light" color="primary" dismissible>
+            <material-alert
+              class="font-weight-light"
+              color="primary"
+              dismissible
+            >
               <span class="text-sm"
                 >A simple primary alert with
                 <a href="javascript:;" class="alert-link text-white"
                   >an example link</a
                 >. Give it a click if you like.</span
               >
-            </vmd-alert>
-            <vmd-alert class="font-weight-light" color="secondary" dismissible>
+            </material-alert>
+            <material-alert
+              class="font-weight-light"
+              color="secondary"
+              dismissible
+            >
               <span class="text-sm"
                 >A simple secondary alert with
                 <a href="javascript:;" class="alert-link text-white"
                   >an example link</a
                 >. Give it a click if you like.</span
               >
-            </vmd-alert>
-            <vmd-alert class="font-weight-light" color="success" dismissible>
+            </material-alert>
+            <material-alert
+              class="font-weight-light"
+              color="success"
+              dismissible
+            >
               <span class="text-sm"
                 >A simple success alert with
                 <a href="javascript:;" class="alert-link text-white"
                   >an example link</a
                 >. Give it a click if you like.</span
               >
-            </vmd-alert>
-            <vmd-alert class="font-weight-light" color="danger" dismissible>
+            </material-alert>
+            <material-alert
+              class="font-weight-light"
+              color="danger"
+              dismissible
+            >
               <span class="text-sm"
                 >A simple danger alert with
                 <a href="javascript:;" class="alert-link text-white"
                   >an example link</a
                 >. Give it a click if you like.</span
               >
-            </vmd-alert>
-            <vmd-alert class="font-weight-light" color="warning" dismissible>
+            </material-alert>
+            <material-alert
+              class="font-weight-light"
+              color="warning"
+              dismissible
+            >
               <span class="text-sm"
                 >A simple warning alert with
                 <a href="javascript:;" class="alert-link text-white"
                   >an example link</a
                 >. Give it a click if you like.</span
               >
-            </vmd-alert>
-            <vmd-alert class="font-weight-light" color="info" dismissible>
+            </material-alert>
+            <material-alert class="font-weight-light" color="info" dismissible>
               <span class="text-sm"
                 >A simple info alert with
                 <a href="javascript:;" class="alert-link text-white"
                   >an example link</a
                 >. Give it a click if you like.</span
               >
-            </vmd-alert>
-            <vmd-alert class="font-weight-light" color="light" dismissible>
+            </material-alert>
+            <material-alert class="font-weight-light" color="light" dismissible>
               <span class="text-sm"
                 >A simple light alert with
                 <a href="javascript:;" class="alert-link text-white"
                   >an example link</a
                 >. Give it a click if you like.</span
               >
-            </vmd-alert>
-            <vmd-alert color="dark" dismissible>
+            </material-alert>
+            <material-alert color="dark" dismissible>
               <span class="text-sm"
                 >A simple dark alert with
                 <a href="javascript:;" class="alert-link text-white"
                   >an example link</a
                 >. Give it a click if you like.</span
               >
-            </vmd-alert>
+            </material-alert>
           </div>
         </div>
         <div class="card mt-4">
@@ -135,7 +155,7 @@
       </div>
     </div>
     <div class="position-fixed bottom-1 end-1 z-index-2">
-      <vmd-snackbar
+      <material-snackbar
         v-if="snackbar === 'success'"
         title="Material Dashboard"
         date="11 mins ago"
@@ -146,7 +166,7 @@
         :closeHandler="closeSnackbar"
         iconName="close"
       />
-      <vmd-snackbar
+      <material-snackbar
         v-if="snackbar === 'info'"
         title="Material Dashboard"
         date="11 mins ago"
@@ -157,7 +177,7 @@
         :closeHandler="closeSnackbar"
         iconName="close"
       />
-      <vmd-snackbar
+      <material-snackbar
         v-if="snackbar === 'warning'"
         title="Material Dashboard"
         date="11 mins ago"
@@ -168,7 +188,7 @@
         :closeHandler="closeSnackbar"
         iconName="close"
       />
-      <vmd-snackbar
+      <material-snackbar
         v-if="snackbar === 'danger'"
         title="Material Dashboard"
         date="11 mins ago"
@@ -184,14 +204,14 @@
 </template>
 
 <script>
-import VmdAlert from "@/components/VmdAlert.vue";
-import VmdSnackbar from "@/components/VmdSnackbar.vue";
+import MaterialSnackbar from "@/components/MaterialSnackbar.vue";
+import MaterialAlert from "@/components/MaterialAlert.vue";
 
 export default {
   name: "Notifications",
   components: {
-    VmdAlert,
-    VmdSnackbar,
+    MaterialSnackbar,
+    MaterialAlert,
   },
   data() {
     return {
