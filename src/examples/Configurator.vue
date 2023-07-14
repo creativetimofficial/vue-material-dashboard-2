@@ -105,7 +105,7 @@
             <input
               class="form-check-input mt-1 ms-auto"
               type="checkbox"
-              :checked="this.$store.state.isDarkMode"
+              :checked="$store.state.isDarkMode"
               @click="darkMode"
             />
           </div>

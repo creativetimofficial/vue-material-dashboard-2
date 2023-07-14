@@ -5,7 +5,7 @@
         <a
           class="nav-link mb-0 px-0 py-1 active active"
           data-bs-toggle="tab"
-          href="../../../examples/pages/account/settings.html"
+          href="#"
           role="tab"
           aria-selected="true"
           >Messages</a
@@ -15,7 +15,7 @@
         <a
           class="nav-link mb-0 px-0 py-1"
           data-bs-toggle="tab"
-          href="../../../examples/pages/account/billing.html"
+          href="#"
           role="tab"
           aria-selected="false"
           >Social</a
@@ -25,7 +25,7 @@
         <a
           class="nav-link mb-0 px-0 py-1"
           data-bs-toggle="tab"
-          href="../../../examples/pages/account/invoice.html"
+          href="#"
           role="tab"
           aria-selected="false"
           >Notifications</a
@@ -35,7 +35,7 @@
         <a
           class="nav-link mb-0 px-0 py-1"
           data-bs-toggle="tab"
-          href="../../../examples/pages/account/security.html"
+          href="#"
           role="tab"
           aria-selected="false"
           >Backup</a

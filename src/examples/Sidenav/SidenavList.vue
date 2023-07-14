@@ -74,7 +74,7 @@
       <li class="mt-3 nav-item">
         <h6
           class="text-xs ps-4 text-uppercase font-weight-bolder text-white"
-          :class="this.$store.state.isRTL ? 'me-4' : 'ms-2'"
+          :class="$store.state.isRTL ? 'me-4' : 'ms-2'"
         >
           ACCOUNT PAGES
         </h6>
@@ -137,17 +137,17 @@ import SidenavCollapse from "./SidenavCollapse.vue";
 export default {
   name: "SidenavList",
   props: {
-    cardBg: String
+    cardBg: String,
   },
   data() {
     return {
       title: "Soft UI Dashboard PRO",
       controls: "dashboardsExamples",
-      isActive: "active"
+      isActive: "active",
     };
   },
   components: {
-    SidenavCollapse
-  }
+    SidenavCollapse,
+  },
 };
 </script>
