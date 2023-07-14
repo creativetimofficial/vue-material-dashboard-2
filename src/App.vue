@@ -1,10 +1,10 @@
 <!--
 =========================================================
-* Vue Material Dashboard 2 - v3.0.0
+* Vue Material Dashboard 2 - v3.1.0
 =========================================================
 
 * Product Page: https://creative-tim.com/product/vue-material-dashboard-2
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
 
 Coded by www.creative-tim.com
 
@@ -49,10 +49,10 @@ export default {
     Sidenav,
     Configurator,
     Navbar,
-    AppFooter
+    AppFooter,
   },
   methods: {
-    ...mapMutations(["toggleConfigurator", "navbarMinimize"])
+    ...mapMutations(["toggleConfigurator", "navbarMinimize"]),
   },
   computed: {
     ...mapState([
@@ -66,8 +66,8 @@ export default {
       "showNavbar",
       "showFooter",
       "showConfig",
-      "hideConfigButton"
-    ])
+      "hideConfigButton",
+    ]),
   },
   beforeMount() {
     this.$store.state.isTransparent = "bg-transparent";
@@ -77,6 +77,6 @@ export default {
     if (window.innerWidth > 1200) {
       sidenav.classList.add("g-sidenav-pinned");
     }
-  }
+  },
 };
 </script>
