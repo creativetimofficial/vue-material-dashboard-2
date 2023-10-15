@@ -1,6 +1,6 @@
 # Change Log
 
-## [3.1.0] 2023-07-14
+## [3.1.0] 2023-10-15
 
 - Update dependencies & devDependencies
 - Add support for two-way data binding to `MaterialInput`
