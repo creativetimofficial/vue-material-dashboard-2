@@ -14,6 +14,7 @@
       :placeholder="placeholder"
       :isRequired="isRequired"
       :disabled="disabled"
+      @input="$emit('update:value', $event.target.value)"
     />
   </div>
 </template>
@@ -73,6 +74,7 @@ export default {
       default: false,
     },
   },
+  emits: ["update:value"],
   mounted() {
     setMaterialInput();
   },
